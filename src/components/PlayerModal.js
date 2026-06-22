@@ -3,346 +3,333 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 
 export default function PlayerModal({ channel, onClose }) {
-  const [status, setStatus] = useState('loading') // loading | playing | error | timeout
-  const [errorMsg, setErrorMsg] = useState('')
-  const [quality, setQuality] = useState('auto')
-  const [availableQualities, setAvailableQualities] = useState([])
   const videoRef = useRef(null)
   const hlsRef = useRef(null)
-  const timeoutRef = useRef(null)
+  const [status, setStatus] = useState('loading') // loading | playing | error
+  const [errorMsg, setErrorMsg] = useState('')
+  const [qualities, setQualities] = useState([])
+  const [currentQuality, setCurrentQuality] = useState(-1) // -1 = auto
+  const [showQualityMenu, setShowQualityMenu] = useState(false)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  const playerRef = useRef(null)
 
-  // Quality mapping
-  const QUALITY_MAP = {
-    'auto': 0,    // auto = highest
-    '2160p': 4,
-    '1080p': 3,
-    '720p': 2,
-    '480p': 1,
-    '360p': 0,
-  }
-
-  // Init HLS for M3U8 streams
-  const initHls = useCallback(async () => {
-    if (channel.type !== 'm3u8') return
+  // Init HLS
+  useEffect(() => {
+    if (!channel || channel.type !== 'm3u8') return
 
     setStatus('loading')
+    setErrorMsg('')
+    setQualities([])
+    setCurrentQuality(-1)
 
-    // Timeout: if still loading after 15s, show timeout
-    timeoutRef.current = setTimeout(() => {
-      if (status === 'loading') {
-        setStatus('timeout')
-        setErrorMsg('Stream timeout — channel mungkin offline atau butuh VPN')
-      }
-    }, 15000)
+    const initHls = async () => {
+      try {
+        const Hls = (await import('hls.js')).default
 
-    try {
-      const Hls = (await import('hls.js')).default
+        if (hlsRef.current) {
+          hlsRef.current.destroy()
+          hlsRef.current = null
+        }
 
-      if (!Hls.isSupported()) {
-        setStatus('error')
-        setErrorMsg('Browser tidak support HLS')
-        return
-      }
+        if (!Hls.isSupported()) {
+          setStatus('error')
+          setErrorMsg('HLS tidak didukung browser ini')
+          return
+        }
 
-      if (hlsRef.current) {
-        hlsRef.current.destroy()
-      }
+        const hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true,
+        })
+        hlsRef.current = hls
+        hls.attachMedia(videoRef.current)
 
-      const hls = new Hls({
-        enableWorker: true,
-        lowLatencyMode: true,
-        backbufferLength: 60,
-        maxBufferLength: 30,
-        maxMaxBufferLength: 60,
-      })
-      hlsRef.current = hls
+        hls.on(Hls.Events.MEDIA_ATTACHED, () => {
+          hls.loadSource(channel.src)
+        })
 
-      hls.attachMedia(videoRef.current)
-
-      hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-        hls.loadSource(channel.src)
-      })
-
-      hls.on(Hls.Events.MANIFEST_PARSED, (event, data) => {
-        clearTimeout(timeoutRef.current)
-        setStatus('playing')
-        
-        // Extract available qualities
-        if (data.levels && data.levels.length > 0) {
-          const qs = data.levels.map((l, i) => ({
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          // Dapatkan daftar kualitas
+          const levels = hls.levels.map((l, i) => ({
             id: i,
-            label: l.height ? `${l.height}p` : `Level ${i}`,
-            height: l.height || 0,
+            height: l.height,
+            bitrate: l.bitrate,
+            name: l.height >= 1080 ? '1080p' :
+                  l.height >= 720 ? '720p' :
+                  l.height >= 480 ? '480p' :
+                  l.height >= 360 ? '360p' :
+                  l.height >= 240 ? '240p' : `${l.height}p`
           }))
-          // Sort by height desc
-          qs.sort((a, b) => b.height - a.height)
-          setAvailableQualities(qs)
-        }
+          setQualities(levels)
+          setStatus('playing')
+          videoRef.current?.play().catch(() => {})
+        })
 
-        // Auto play
-        videoRef.current?.play().catch(() => {})
-      })
+        hls.on(Hls.Events.LEVEL_SWITCHED, (event, data) => {
+          setCurrentQuality(data.level)
+        })
 
-      hls.on(Hls.Events.LEVEL_SWITCHED, (event, data) => {
-        if (data.level >= 0 && availableQualities[data.level]) {
-          setQuality(availableQualities[data.level].label)
-        }
-      })
-
-      hls.on(Hls.Events.ERROR, (event, data) => {
-        if (data.fatal) {
-          switch (data.type) {
-            case Hls.ErrorTypes.NETWORK_ERROR:
-              // Retry once
-              hls.startLoad()
-              break
-            case Hls.ErrorTypes.MEDIA_ERROR:
-              hls.recoverMediaError()
-              break
-            default:
-              clearTimeout(timeoutRef.current)
-              setStatus('error')
-              setErrorMsg('Stream error — coba channel lain')
-              break
+        hls.on(Hls.Events.ERROR, (event, data) => {
+          if (data.fatal) {
+            setStatus('error')
+            if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+              setErrorMsg('Stream timeout — channel mungkin offline atau geo-blocked')
+            } else {
+              setErrorMsg('Error memuat stream. Coba channel lain.')
+            }
           }
-        }
-      })
-
-      // Store hls ref for quality switching
-      window.__hls = hls
-    } catch (e) {
-      clearTimeout(timeoutRef.current)
-      setStatus('error')
-      setErrorMsg('Gagal load player: ' + e.message)
-    }
-  }, [channel, status, availableQualities])
-
-  // Init player
-  useEffect(() => {
-    if (channel.type === 'm3u8') {
-      initHls()
-    } else if (channel.type === 'youtube') {
-      setStatus('playing')
-    } else if (channel.type === 'iframe') {
-      setStatus('playing')
+        })
+      } catch (e) {
+        setStatus('error')
+        setErrorMsg('Gagal memuat player')
+      }
     }
 
+    const timer = setTimeout(initHls, 300)
     return () => {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timer)
       if (hlsRef.current) {
         hlsRef.current.destroy()
         hlsRef.current = null
       }
     }
-  }, [channel, initHls])
+  }, [channel])
 
-  // Quality selector handler
-  const handleQualityChange = (levelId) => {
-    const hls = window.__hls
-    if (hls) {
-      hls.currentLevel = levelId
-    }
-  }
-
-  // Retry
-  const handleRetry = () => {
-    setStatus('loading')
-    setErrorMsg('')
-    clearTimeout(timeoutRef.current)
+  // Ganti kualitas
+  const changeQuality = useCallback((levelId) => {
     if (hlsRef.current) {
-      hlsRef.current.destroy()
-      hlsRef.current = null
+      if (levelId === -1) {
+        hlsRef.current.currentLevel = -1 // auto
+        setCurrentQuality(-1)
+      } else {
+        hlsRef.current.currentLevel = levelId
+        setCurrentQuality(levelId)
+      }
     }
-    // Re-init after small delay
-    setTimeout(initHls, 500)
-  }
+    setShowQualityMenu(false)
+  }, [])
+
+  // Fullscreen toggle
+  const toggleFullscreen = useCallback(() => {
+    if (!playerRef.current) return
+    if (!document.fullscreenElement) {
+      playerRef.current.requestFullscreen?.()
+      setIsFullscreen(true)
+    } else {
+      document.exitFullscreen?.()
+      setIsFullscreen(false)
+    }
+  }, [])
+
+  // Close on ESC
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.key === 'Escape') {
+        if (showQualityMenu) {
+          setShowQualityMenu(false)
+        } else {
+          onClose()
+        }
+      }
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [onClose, showQualityMenu])
+
+  // Prevent body scroll
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = '' }
+  }, [])
 
   return (
     <div style={{
       position: 'fixed',
       top: 0, left: 0, right: 0, bottom: 0,
-      background: 'rgba(0,0,0,0.95)',
-      zIndex: 9999,
+      background: 'rgba(0,0,0,0.92)',
       display: 'flex',
       flexDirection: 'column',
+      zIndex: 9999,
       animation: 'fadeIn 0.2s ease',
     }}>
-      {/* Header bar */}
+      {/* ===== TOP BAR ===== */}
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '12px 16px',
+        padding: '10px 16px',
         background: '#0a0a12',
         borderBottom: '1px solid #1a1a2e',
+        flexShrink: 0,
       }}>
-        <div>
-          <span style={{ fontSize: 13, color: '#00e676', fontWeight: 600 }}>{channel.logo}</span>
-          <span style={{ fontSize: 14, fontWeight: 700, marginLeft: 8 }}>{channel.name}</span>
-          <span style={{ fontSize: 11, color: '#666', marginLeft: 8 }}>
-            {channel.verified ? '✅' : '🔴 LIVE'}
-          </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <button onClick={onClose} style={{
+            background: 'none', border: 'none', color: '#888', cursor: 'pointer',
+            fontSize: 20, padding: '4px 8px', borderRadius: 6,
+          }}>←</button>
+          <div>
+            <div style={{ fontSize: 15, fontWeight: 700 }}>{channel.logo} {channel.name}</div>
+            <div style={{ fontSize: 11, color: '#555' }}>🔴 LIVE · {channel.lang}</div>
+          </div>
         </div>
-        
-        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-          {/* Quality selector — only for M3U8 */}
-          {channel.type === 'm3u8' && availableQualities.length > 0 && (
-            <select
-              value={quality}
-              onChange={e => handleQualityChange(parseInt(e.target.value))}
-              style={{
-                padding: '4px 8px',
+        <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+          {/* Quality Selector */}
+          {status === 'playing' && qualities.length > 0 && (
+            <div style={{ position: 'relative' }}>
+              <button onClick={() => setShowQualityMenu(!showQualityMenu)} style={{
+                padding: '5px 10px',
                 borderRadius: 6,
-                border: '1px solid #2a2a3e',
-                background: '#12121a',
-                color: '#e0e0e0',
+                border: '1px solid #333',
+                background: '#1a1a2e',
+                color: '#aaa',
+                cursor: 'pointer',
                 fontSize: 11,
                 fontWeight: 600,
-                outline: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              <option value="auto">Auto</option>
-              {availableQualities.map(q => (
-                <option key={q.id} value={q.id}>{q.label}</option>
-              ))}
-            </select>
+              }}>
+                {currentQuality === -1 ? 'Auto' : qualities.find(q => q.id === currentQuality)?.name || 'Auto'} ▾
+              </button>
+              {showQualityMenu && (
+                <div style={{
+                  position: 'absolute',
+                  top: '100%', right: 0, marginTop: 4,
+                  background: '#12121a',
+                  border: '1px solid #2a2a3e',
+                  borderRadius: 8,
+                  overflow: 'hidden',
+                  minWidth: 100,
+                  zIndex: 100,
+                  boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
+                }}>
+                  <button onClick={() => changeQuality(-1)} style={{
+                    width: '100%',
+                    padding: '8px 14px',
+                    border: 'none',
+                    background: currentQuality === -1 ? '#00e67620' : 'transparent',
+                    color: currentQuality === -1 ? '#00e676' : '#aaa',
+                    cursor: 'pointer',
+                    fontSize: 12,
+                    textAlign: 'left',
+                  }}>🔄 Auto</button>
+                  {qualities.map(q => (
+                    <button key={q.id} onClick={() => changeQuality(q.id)} style={{
+                      width: '100%',
+                      padding: '8px 14px',
+                      border: 'none',
+                      background: currentQuality === q.id ? '#00e67620' : 'transparent',
+                      color: currentQuality === q.id ? '#00e676' : '#aaa',
+                      cursor: 'pointer',
+                      fontSize: 12,
+                      textAlign: 'left',
+                    }}>
+                      {q.name} {q.id === 0 && '(Terendah)'} {q.id === qualities.length - 1 && '(Tertinggi)'}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           )}
-          
-          {/* Close button */}
-          <button
-            onClick={onClose}
-            style={{
-              width: 32, height: 32,
-              borderRadius: 8,
-              border: 'none',
-              background: '#1a1a2e',
-              color: '#e0e0e0',
-              cursor: 'pointer',
-              fontSize: 18,
-              fontWeight: 700,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              lineHeight: 1,
-            }}
-          >
-            ✕
-          </button>
+
+          {/* Fullscreen */}
+          <button onClick={toggleFullscreen} style={{
+            padding: '5px 10px',
+            borderRadius: 6,
+            border: '1px solid #333',
+            background: '#1a1a2e',
+            color: '#aaa',
+            cursor: 'pointer',
+            fontSize: 14,
+          }}>⛶</button>
+
+          {/* Close */}
+          <button onClick={onClose} style={{
+            padding: '5px 10px',
+            borderRadius: 6,
+            border: '1px solid #ff333333',
+            background: '#ff000011',
+            color: '#ff6666',
+            cursor: 'pointer',
+            fontSize: 13,
+            fontWeight: 600,
+          }}>✕ Tutup</button>
         </div>
       </div>
 
-      {/* Player area */}
-      <div style={{
+      {/* ===== VIDEO PLAYER ===== */}
+      <div ref={playerRef} style={{
         flex: 1,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
         background: '#000',
+        minHeight: 0,
       }}>
         {/* Loading */}
         {status === 'loading' && (
-          <div style={{ textAlign: 'center', color: '#888' }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>⏳</div>
-            <div style={{ fontSize: 14, fontWeight: 600, color: '#aaa' }}>Loading stream...</div>
-            <div style={{ fontSize: 12, color: '#555', marginTop: 4 }}>{channel.name}</div>
-          </div>
-        )}
-
-        {/* Timeout */}
-        {status === 'timeout' && (
-          <div style={{ textAlign: 'center', color: '#ff6b6b' }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>⏰</div>
-            <div style={{ fontSize: 14, fontWeight: 600 }}>Stream timeout</div>
-            <div style={{ fontSize: 12, color: '#ff6b6b88', marginTop: 4, maxWidth: 400, padding: '0 20px' }}>
-              {errorMsg}
-            </div>
-            <button onClick={handleRetry} style={{
-              marginTop: 16, padding: '8px 24px', borderRadius: 8, border: 'none',
-              background: '#ff6b6b', color: '#fff', fontWeight: 700, cursor: 'pointer', fontSize: 13,
-            }}>
-              🔄 Retry
-            </button>
+          <div style={{ textAlign: 'center', padding: 40 }}>
+            <div style={{ fontSize: 48, marginBottom: 16 }}>⏳</div>
+            <div style={{ color: '#888', fontSize: 14 }}>Loading stream...</div>
+            <div style={{ color: '#555', fontSize: 12, marginTop: 6 }}>{channel.src.substring(0, 60)}...</div>
           </div>
         )}
 
         {/* Error */}
         {status === 'error' && (
-          <div style={{ textAlign: 'center', color: '#ff6b6b' }}>
-            <div style={{ fontSize: 40, marginBottom: 12 }}>❌</div>
-            <div style={{ fontSize: 14, fontWeight: 600 }}>Error</div>
-            <div style={{ fontSize: 12, color: '#ff6b6b88', marginTop: 4 }}>{errorMsg}</div>
-            <button onClick={handleRetry} style={{
-              marginTop: 16, padding: '8px 24px', borderRadius: 8, border: 'none',
-              background: '#ff6b6b', color: '#fff', fontWeight: 700, cursor: 'pointer', fontSize: 13,
-            }}>
-              🔄 Retry
-            </button>
+          <div style={{ textAlign: 'center', padding: 40 }}>
+            <div style={{ fontSize: 48, marginBottom: 16 }}>❌</div>
+            <div style={{ color: '#ff6b6b', fontSize: 14, fontWeight: 600 }}>{errorMsg}</div>
+            <div style={{ color: '#888', fontSize: 12, marginTop: 8 }}>{channel.name}</div>
+            <button onClick={onClose} style={{
+              marginTop: 16,
+              padding: '10px 24px',
+              borderRadius: 8,
+              border: '1px solid #333',
+              background: '#1a1a2e',
+              color: '#aaa',
+              cursor: 'pointer',
+              fontSize: 13,
+            }}>← Kembali ke daftar channel</button>
           </div>
         )}
 
-        {/* M3U8 Video Player */}
-        {channel.type === 'm3u8' && (
-          <video
-            ref={videoRef}
-            controls
-            autoPlay
-            playsInline
-            style={{
-              width: '100%',
-              height: '100%',
-              maxHeight: '100vh',
-              display: status === 'playing' ? 'block' : 'none',
-              objectFit: 'contain',
-              background: '#000',
-            }}
-          />
-        )}
-
-        {/* YouTube Player */}
-        {channel.type === 'youtube' && (
-          <iframe
-            src={channel.src}
-            style={{
-              width: '100%',
-              height: '100%',
-              border: 'none',
-            }}
-            allow="autoplay; encrypted-media; fullscreen"
-            allowFullScreen
-          />
-        )}
-
-        {/* Iframe Embed Player */}
-        {channel.type === 'iframe' && (
-          <iframe
-            src={channel.src}
-            style={{
-              width: '100%',
-              height: '100%',
-              border: 'none',
-            }}
-            allow="autoplay; encrypted-media; fullscreen"
-            allowFullScreen
-          />
-        )}
+        {/* Video Element */}
+        <video
+          ref={videoRef}
+          controls
+          autoPlay
+          playsInline
+          style={{
+            width: '100%',
+            height: '100%',
+            maxHeight: '100vh',
+            display: status === 'playing' ? 'block' : 'none',
+            objectFit: 'contain',
+            background: '#000',
+          }}
+        />
       </div>
 
-      {/* Channel info bar */}
+      {/* Info bar */}
       <div style={{
         padding: '8px 16px',
         background: '#0a0a12',
         borderTop: '1px solid #1a1a2e',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
         fontSize: 11,
         color: '#555',
+        flexShrink: 0,
+        display: 'flex',
+        justifyContent: 'space-between',
       }}>
-        <span>📡 Sumber: {channel.src.substring(0, 50)}...</span>
-        <span>{status === 'playing' ? '🔴 LIVE' : status.toUpperCase()}</span>
+        <span>🔴 LIVE · {channel.name}</span>
+        <span>Stream via {channel.type?.toUpperCase() || 'HLS'}</span>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+      `}</style>
     </div>
   )
 }
