@@ -22,6 +22,9 @@ export default function PlayerModal({ channel, onClose }) {
     setLoading(true)
     setError(null)
 
+    // Pake proxy buat bypass CORS + tambah headers
+    const streamUrl = `/api/proxy?url=${encodeURIComponent(channel.src)}`
+
     const initHls = async () => {
       try {
         const Hls = (await import('hls.js')).default
@@ -33,7 +36,7 @@ export default function PlayerModal({ channel, onClose }) {
         if (!Hls.isSupported()) {
           // Fallback: coba native HLS (Safari)
           if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
-            videoRef.current.src = channel.src
+            videoRef.current.src = streamUrl
             return
           }
           setError('Browser tidak mendukung HLS')
@@ -46,13 +49,22 @@ export default function PlayerModal({ channel, onClose }) {
           lowLatencyMode: true,
           backbufferLength: 60,
           maxBufferLength: 60,
+          // Pake XHR biar bisa set custom headers via xhrSetup
+          loader: undefined, // biarin hls.js pilih default
+          xhrSetup: (xhr, url) => {
+            // Proxy udah handle headers, tapi kalo ada request langsung ke CDN
+            if (!url.includes('/api/proxy')) {
+              xhr.setRequestHeader('Referer', 'https://www.google.com/')
+              xhr.setRequestHeader('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+            }
+          },
         })
         hlsRef.current = hls
 
         hls.attachMedia(videoRef.current)
 
         hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-          hls.loadSource(channel.src)
+          hls.loadSource(streamUrl)
         })
 
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
