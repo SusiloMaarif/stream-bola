@@ -6,6 +6,7 @@ export default function PlayerModal({ channel, onClose }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [showBackdrop, setShowBackdrop] = useState(false)
+  const [retryCount, setRetryCount] = useState(0)
   const videoRef = useRef(null)
   const hlsRef = useRef(null)
 
@@ -22,93 +23,132 @@ export default function PlayerModal({ channel, onClose }) {
     setLoading(true)
     setError(null)
 
-    // Pake proxy buat bypass CORS + tambah headers
-    const streamUrl = `/api/proxy?url=${encodeURIComponent(channel.src)}`
+    // Proxy URL — bypass CORS + rewrite segment URLs
+    const proxyUrl = `/api/proxy?url=${encodeURIComponent(channel.src)}`
 
-    const initHls = async () => {
-      try {
-        const Hls = (await import('hls.js')).default
+    // Coba native HLS dulu (Safari, iOS)
+    const video = videoRef.current
+    if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = proxyUrl
+      video.addEventListener('loadedmetadata', () => setLoading(false), { once: true })
+      video.addEventListener('error', () => {
+        // Fallback ke hls.js kalo gagal
+        initHlsJs(proxyUrl)
+      }, { once: true })
+      return
+    }
 
-        if (hlsRef.current) {
-          hlsRef.current.destroy()
-        }
+    initHlsJs(proxyUrl)
 
-        if (!Hls.isSupported()) {
-          // Fallback: coba native HLS (Safari)
-          if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
-            videoRef.current.src = streamUrl
+    function initHlsJs(url) {
+      let destroyed = false
+
+      const init = async () => {
+        try {
+          const Hls = (await import('hls.js')).default
+
+          if (!Hls.isSupported()) {
+            setError('Browser tidak mendukung HLS streaming')
+            setLoading(false)
             return
           }
-          setError('Browser tidak mendukung HLS')
-          setLoading(false)
-          return
-        }
 
-        const hls = new Hls({
-          enableWorker: true,
-          lowLatencyMode: true,
-          backbufferLength: 60,
-          maxBufferLength: 60,
-          // Pake XHR biar bisa set custom headers via xhrSetup
-          loader: undefined, // biarin hls.js pilih default
-          xhrSetup: (xhr, url) => {
-            // Proxy udah handle headers, tapi kalo ada request langsung ke CDN
-            if (!url.includes('/api/proxy')) {
-              xhr.setRequestHeader('Referer', 'https://www.google.com/')
-              xhr.setRequestHeader('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+          if (hlsRef.current) hlsRef.current.destroy()
+
+          const hls = new Hls({
+            enableWorker: true,
+            lowLatencyMode: true,
+            backbufferLength: 60,
+            maxBufferLength: 60,
+            maxMaxBufferLength: 120,
+            startFragPrefetch: true,
+            // Timeout lebih longgar
+            manifestLoadingTimeOut: 20000,
+            levelLoadingTimeOut: 15000,
+            fragLoadingTimeOut: 20000,
+          })
+          
+          hlsRef.current = hls
+
+          hls.attachMedia(video)
+          
+          hls.on(Hls.Events.MEDIA_ATTACHED, () => {
+            if (!destroyed) hls.loadSource(url)
+          })
+
+          hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            if (!destroyed) {
+              setLoading(false)
+              video.play().catch(() => {})
             }
-          },
-        })
-        hlsRef.current = hls
+          })
 
-        hls.attachMedia(videoRef.current)
+          // Satu level berhasil
+          hls.on(Hls.Events.LEVEL_LOADED, () => {
+            if (!destroyed) setLoading(false)
+          })
 
-        hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-          hls.loadSource(streamUrl)
-        })
+          hls.on(Hls.Events.ERROR, (event, data) => {
+            if (destroyed) return
+            console.warn('HLS error:', data.type, data.details, data.fatal)
 
-        hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          setLoading(false)
-          videoRef.current?.play().catch(() => {})
-        })
-
-        hls.on(Hls.Events.ERROR, (event, data) => {
-          if (data.fatal) {
-            switch (data.type) {
-              case Hls.ErrorTypes.NETWORK_ERROR:
-                hls.startLoad()
-                break
-              case Hls.ErrorTypes.MEDIA_ERROR:
-                hls.recoverMediaError()
-                break
-              default:
-                setError('Stream error — coba channel lain')
-                setLoading(false)
-                break
+            if (data.fatal) {
+              switch (data.type) {
+                case Hls.ErrorTypes.NETWORK_ERROR:
+                  // Coba recover — retry loading
+                  console.log('HLS network error, retrying...')
+                  setTimeout(() => {
+                    if (!destroyed) hls.startLoad()
+                  }, 1000)
+                  break
+                case Hls.ErrorTypes.MEDIA_ERROR:
+                  // Media error — recover
+                  console.log('HLS media error, recovering...')
+                  hls.recoverMediaError()
+                  break
+                default:
+                  // Fatal — coba sekali lagi pake direct URL (tanpa proxy)
+                  if (retryCount < 1) {
+                    setRetryCount(prev => prev + 1)
+                    setLoading(true)
+                    hls.destroy()
+                    // Coba direct tanpa proxy buat stream yang gak suka proxy
+                    const hls2 = new Hls({ enableWorker: true })
+                    hlsRef.current = hls2
+                    hls2.attachMedia(video)
+                    hls2.on(Hls.Events.MEDIA_ATTACHED, () => {
+                      hls2.loadSource(channel.src)
+                    })
+                    hls2.on(Hls.Events.MANIFEST_PARSED, () => {
+                      setLoading(false)
+                      video.play().catch(() => {})
+                    })
+                    hls2.on(Hls.Events.ERROR, () => {
+                      setError('Stream tidak bisa diputar. Coba channel lain.')
+                      setLoading(false)
+                    })
+                    return
+                  }
+                  setError('Stream tidak bisa diputar. Coba channel lain.')
+                  setLoading(false)
+                  break
+              }
             }
+          })
+        } catch (e) {
+          if (!destroyed) {
+            setError('Gagal memuat player')
+            setLoading(false)
           }
-        })
-
-        hls.on(Hls.Events.LEVEL_SWITCHED, () => {
-          setLoading(false)
-        })
-      } catch (e) {
-        setError('Gagal memuat player: ' + e.message)
-        setLoading(false)
+        }
       }
-    }
 
-    const timer = setTimeout(initHls, 200)
-    return () => {
-      clearTimeout(timer)
-      if (hlsRef.current) {
-        hlsRef.current.destroy()
-        hlsRef.current = null
-      }
+      init()
+      return () => { destroyed = true }
     }
-  }, [channel])
+  }, [channel, retryCount])
 
-  // Cleanup on unmount
+  // Cleanup
   useEffect(() => {
     return () => {
       if (hlsRef.current) {
@@ -140,13 +180,14 @@ export default function PlayerModal({ channel, onClose }) {
         background: '#0a0a12',
         borderBottom: '1px solid #1e1e2e',
         zIndex: 10,
+        flexShrink: 0,
       }}>
         <div>
           <div style={{ fontSize: 14, fontWeight: 700, color: '#00e676' }}>
             {channel.logo} {channel.name}
           </div>
           <div style={{ fontSize: 11, color: '#555', marginTop: 2 }}>
-            ⏺ LIVE — Click close (X) to stop
+            ⏺ LIVE — Tekan ✕ untuk berhenti
           </div>
         </div>
         <button
@@ -200,7 +241,7 @@ export default function PlayerModal({ channel, onClose }) {
             <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
             <div style={{ color: '#555', fontSize: 13 }}>⏳ Loading stream...</div>
             <div style={{ color: '#333', fontSize: 11, maxWidth: 300, textAlign: 'center', wordBreak: 'break-all' }}>
-              {channel.src.substring(0, 80)}...
+              {channel.name} • {channel.reliable ? 'Official Stream' : 'IPTV Stream'}
             </div>
           </div>
         )}
@@ -222,33 +263,59 @@ export default function PlayerModal({ channel, onClose }) {
             <div style={{ color: '#ff6b6b', fontSize: 15, fontWeight: 600 }}>{error}</div>
             <div style={{ color: '#555', fontSize: 12, maxWidth: 400, textAlign: 'center' }}>
               {channel.reliable ? (
-                'Channel ini seharusnya stabil. Coba refresh atau ganti channel.'
+                'Channel official — coba refresh atau ganti channel.'
               ) : (
                 <>
                   Sumber IPTV mungkin mati/geo-blocked.
-                  <br />Coba pakai <strong>VPN Indonesia</strong> atau coba channel lain.
+                  <br />Coba pakai <strong>VPN Indonesia</strong> atau pilih channel lain.
                 </>
               )}
             </div>
-            <button
-              onClick={onClose}
-              style={{
-                padding: '10px 24px',
-                borderRadius: 8,
-                border: '1px solid #333',
-                background: '#1a1a2e',
-                color: '#ccc',
-                cursor: 'pointer',
-                fontSize: 13,
-                fontWeight: 600,
-              }}
-            >
-              ← Kembali ke daftar channel
-            </button>
+            <div style={{ display: 'flex', gap: 10 }}>
+              <button
+                onClick={() => {
+                  setRetryCount(0)
+                  setError(null)
+                  setLoading(true)
+                  // Force re-mount by changing key
+                  if (hlsRef.current) {
+                    hlsRef.current.destroy()
+                    hlsRef.current = null
+                  }
+                }}
+                style={{
+                  padding: '10px 24px',
+                  borderRadius: 8,
+                  border: '1px solid #00e676',
+                  background: '#00e67618',
+                  color: '#00e676',
+                  cursor: 'pointer',
+                  fontSize: 13,
+                  fontWeight: 600,
+                }}
+              >
+                🔄 Coba Lagi
+              </button>
+              <button
+                onClick={onClose}
+                style={{
+                  padding: '10px 24px',
+                  borderRadius: 8,
+                  border: '1px solid #333',
+                  background: '#1a1a2e',
+                  color: '#ccc',
+                  cursor: 'pointer',
+                  fontSize: 13,
+                  fontWeight: 600,
+                }}
+              >
+                ← Kembali
+              </button>
+            </div>
           </div>
         )}
 
-        {/* Video element */}
+        {/* Video element — selalu render biar HLS bisa attach */}
         <video
           ref={videoRef}
           controls
@@ -275,10 +342,18 @@ export default function PlayerModal({ channel, onClose }) {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          flexShrink: 0,
         }}>
           <span>📡 {channel.name} • 24/7 Live</span>
-          <span style={{ color: '#333' }}>
-            {channel.reliable ? '✅ Official' : '🔄 IPTV Source'}
+          <span style={{ 
+            color: channel.reliable ? '#00e676' : '#ffd700',
+            fontSize: 10,
+            fontWeight: 600,
+            padding: '2px 8px',
+            borderRadius: 4,
+            background: channel.reliable ? '#00e67612' : '#ffd70012',
+          }}>
+            {channel.reliable ? '✅ Official' : '🔄 IPTV'}
           </span>
         </div>
       )}
