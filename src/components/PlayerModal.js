@@ -13,6 +13,12 @@ export default function PlayerModal({ channel, onClose }) {
   const [isFullscreen, setIsFullscreen] = useState(false)
   const playerRef = useRef(null)
 
+  // Build proxy URL
+  const getProxyUrl = (src) => {
+    const base = window.location.origin
+    return `${base}/api/proxy?type=m3u8&url=${encodeURIComponent(src)}`
+  }
+
   // Init HLS
   useEffect(() => {
     if (!channel || channel.type !== 'm3u8') return
@@ -40,12 +46,17 @@ export default function PlayerModal({ channel, onClose }) {
         const hls = new Hls({
           enableWorker: true,
           lowLatencyMode: true,
+          manifestLoadingTimeOut: 15000,
+          levelLoadingTimeOut: 15000,
+          fragLoadingTimeOut: 15000,
         })
         hlsRef.current = hls
         hls.attachMedia(videoRef.current)
 
         hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-          hls.loadSource(channel.src)
+          // Load via proxy biar segment di-rewrite
+          const proxyUrl = getProxyUrl(channel.src)
+          hls.loadSource(proxyUrl)
         })
 
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
