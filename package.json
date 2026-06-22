@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": "24.x"
+    "node": "22.x"
   },
+  "packageManager": "pnpm@11.8.0",
   "dependencies": {
     "hls.js": "^1.5.20",
     "next": "14.2.35",
