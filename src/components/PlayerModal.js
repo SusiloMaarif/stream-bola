@@ -1,162 +1,139 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
-export default function PlayerModal({ channel, onClose }) {
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [showBackdrop, setShowBackdrop] = useState(false)
-  const [retryCount, setRetryCount] = useState(0)
-  const videoRef = useRef(null)
-  const hlsRef = useRef(null)
-
-  // Animate in
-  useEffect(() => {
-    const t = setTimeout(() => setShowBackdrop(true), 10)
-    return () => clearTimeout(t)
-  }, [])
-
-  // Init HLS
-  useEffect(() => {
-    if (!channel || channel.type !== 'm3u8') return
-
-    setLoading(true)
-    setError(null)
-
-    // Proxy URL — bypass CORS + rewrite segment URLs
-    const proxyUrl = `/api/proxy?url=${encodeURIComponent(channel.src)}`
-
-    // Coba native HLS dulu (Safari, iOS)
-    const video = videoRef.current
-    if (video && video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = proxyUrl
-      video.addEventListener('loadedmetadata', () => setLoading(false), { once: true })
-      video.addEventListener('error', () => {
-        // Fallback ke hls.js kalo gagal
-        initHlsJs(proxyUrl)
-      }, { once: true })
-      return
-    }
-
-    initHlsJs(proxyUrl)
-
-    function initHlsJs(url) {
-      let destroyed = false
-
-      const init = async () => {
-        try {
-          const Hls = (await import('hls.js')).default
-
-          if (!Hls.isSupported()) {
-            setError('Browser tidak mendukung HLS streaming')
-            setLoading(false)
-            return
+// Custom loader untuk hls.js — semua request lewat proxy biar CORS & mixed-content aman
+function createProxyLoader(Hls) {
+  const DefaultLoader = Hls.DefaultConfig.loader
+  return class ProxyLoader extends DefaultLoader {
+    constructor(config) {
+      super(config)
+      const load = this.load.bind(this)
+      this.load = function(context, config, callbacks) {
+        if (context.url.startsWith('http') && !context.url.includes('/api/proxy')) {
+          context.url = `/api/proxy?url=${encodeURIComponent(context.url)}`
+        }
+        load(context, config, callbacks)
+      }
+      const loadBinary = this.loadBinary?.bind(this)
+      if (loadBinary) {
+        this.loadBinary = function(context, config, callbacks) {
+          if (context.url.startsWith('http') && !context.url.includes('/api/proxy')) {
+            context.url = `/api/proxy?url=${encodeURIComponent(context.url)}`
           }
-
-          if (hlsRef.current) hlsRef.current.destroy()
-
-          const hls = new Hls({
-            enableWorker: true,
-            lowLatencyMode: true,
-            backbufferLength: 60,
-            maxBufferLength: 60,
-            maxMaxBufferLength: 120,
-            startFragPrefetch: true,
-            // Timeout lebih longgar
-            manifestLoadingTimeOut: 20000,
-            levelLoadingTimeOut: 15000,
-            fragLoadingTimeOut: 20000,
-          })
-          
-          hlsRef.current = hls
-
-          hls.attachMedia(video)
-          
-          hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-            if (!destroyed) hls.loadSource(url)
-          })
-
-          hls.on(Hls.Events.MANIFEST_PARSED, () => {
-            if (!destroyed) {
-              setLoading(false)
-              video.play().catch(() => {})
-            }
-          })
-
-          // Satu level berhasil
-          hls.on(Hls.Events.LEVEL_LOADED, () => {
-            if (!destroyed) setLoading(false)
-          })
-
-          hls.on(Hls.Events.ERROR, (event, data) => {
-            if (destroyed) return
-            console.warn('HLS error:', data.type, data.details, data.fatal)
-
-            if (data.fatal) {
-              switch (data.type) {
-                case Hls.ErrorTypes.NETWORK_ERROR:
-                  // Coba recover — retry loading
-                  console.log('HLS network error, retrying...')
-                  setTimeout(() => {
-                    if (!destroyed) hls.startLoad()
-                  }, 1000)
-                  break
-                case Hls.ErrorTypes.MEDIA_ERROR:
-                  // Media error — recover
-                  console.log('HLS media error, recovering...')
-                  hls.recoverMediaError()
-                  break
-                default:
-                  // Fatal — coba sekali lagi pake direct URL (tanpa proxy)
-                  if (retryCount < 1) {
-                    setRetryCount(prev => prev + 1)
-                    setLoading(true)
-                    hls.destroy()
-                    // Coba direct tanpa proxy buat stream yang gak suka proxy
-                    const hls2 = new Hls({ enableWorker: true })
-                    hlsRef.current = hls2
-                    hls2.attachMedia(video)
-                    hls2.on(Hls.Events.MEDIA_ATTACHED, () => {
-                      hls2.loadSource(channel.src)
-                    })
-                    hls2.on(Hls.Events.MANIFEST_PARSED, () => {
-                      setLoading(false)
-                      video.play().catch(() => {})
-                    })
-                    hls2.on(Hls.Events.ERROR, () => {
-                      setError('Stream tidak bisa diputar. Coba channel lain.')
-                      setLoading(false)
-                    })
-                    return
-                  }
-                  setError('Stream tidak bisa diputar. Coba channel lain.')
-                  setLoading(false)
-                  break
-              }
-            }
-          })
-        } catch (e) {
-          if (!destroyed) {
-            setError('Gagal memuat player')
-            setLoading(false)
-          }
+          loadBinary(context, config, callbacks)
         }
       }
-
-      init()
-      return () => { destroyed = true }
     }
-  }, [channel, retryCount])
+  }
+}
 
-  // Cleanup
+export default function PlayerModal({ channel, onClose }) {
+  const videoRef = useRef(null)
+  const hlsRef = useRef(null)
+  const [state, setState] = useState('loading') // loading | playing | error | quality-picker
+  const [errorMsg, setErrorMsg] = useState('')
+  const [qualities, setQualities] = useState([])
+  const [currentQuality, setCurrentQuality] = useState(-1) // -1 = auto
+
   useEffect(() => {
+    if (!channel) return
+
+    setState('loading')
+    setErrorMsg('')
+    setQualities([])
+    setCurrentQuality(-1)
+
+    const init = async () => {
+      try {
+        const Hls = (await import('hls.js')).default
+        if (!Hls.isSupported()) {
+          setState('error')
+          setErrorMsg('Browser tidak mendukung HLS')
+          return
+        }
+
+        const hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true,
+          backbufferLength: 60,
+          loader: createProxyLoader(Hls),
+        })
+        hlsRef.current = hls
+
+        // Detect available qualities
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          const levels = hls.levels
+          if (levels && levels.length > 1) {
+            setQualities(levels.map((l, i) => ({
+              id: i,
+              label: l.height ? `${l.height}p` : `Quality ${i}`,
+              height: l.height || 0,
+              bitrate: l.bitrate,
+            })))
+          }
+          setState('playing')
+          videoRef.current?.play().catch(() => {})
+        })
+
+        // Quality switch handler
+        hls.on(Hls.Events.LEVEL_SWITCHED, (event, data) => {
+          setCurrentQuality(data.level)
+        })
+
+        hls.on(Hls.Events.ERROR, (event, data) => {
+          if (data.fatal) {
+            if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+              hls.startLoad()
+            } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+              hls.recoverMediaError()
+            } else {
+              setState('error')
+              setErrorMsg('Stream error — coba channel lain')
+            }
+          }
+        })
+
+        hls.attachMedia(videoRef.current)
+        hls.on(Hls.Events.MEDIA_ATTACHED, () => {
+          hls.loadSource(channel.src)
+        })
+
+        // Timeout 15 detik
+        setTimeout(() => {
+          if (state === 'loading') {
+            setState('error')
+            setErrorMsg('Stream timeout — channel mungkin offline atau geo-blocked')
+          }
+        }, 15000)
+      } catch (e) {
+        setState('error')
+        setErrorMsg('Gagal memuat player')
+      }
+    }
+
+    init()
+
     return () => {
       if (hlsRef.current) {
         hlsRef.current.destroy()
         hlsRef.current = null
       }
     }
-  }, [])
+  }, [channel])
+
+  // Set quality
+  const setQuality = (levelId) => {
+    if (!hlsRef.current) return
+    if (levelId === -1) {
+      hlsRef.current.currentLevel = -1 // auto
+      setCurrentQuality(-1)
+    } else {
+      hlsRef.current.currentLevel = levelId
+      setCurrentQuality(levelId)
+    }
+    setState('playing')
+  }
 
   if (!channel) return null
 
@@ -164,158 +141,212 @@ export default function PlayerModal({ channel, onClose }) {
     <div style={{
       position: 'fixed',
       top: 0, left: 0, right: 0, bottom: 0,
+      background: 'rgba(0,0,0,0.92)',
       zIndex: 1000,
       display: 'flex',
       flexDirection: 'column',
-      background: '#000',
-      opacity: showBackdrop ? 1 : 0,
-      transition: 'opacity 0.3s ease',
+      backdropFilter: 'blur(4px)',
     }}>
-      {/* Top bar */}
+      {/* Header */}
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '12px 16px',
         background: '#0a0a12',
-        borderBottom: '1px solid #1e1e2e',
-        zIndex: 10,
-        flexShrink: 0,
+        borderBottom: '1px solid #1a1a2e',
       }}>
-        <div>
-          <div style={{ fontSize: 14, fontWeight: 700, color: '#00e676' }}>
-            {channel.logo} {channel.name}
-          </div>
-          <div style={{ fontSize: 11, color: '#555', marginTop: 2 }}>
-            ⏺ LIVE — Tekan ✕ untuk berhenti
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span style={{ fontSize: 24 }}>{channel.logo}</span>
+          <div>
+            <div style={{ fontSize: 15, fontWeight: 700 }}>{channel.name}</div>
+            <div style={{ fontSize: 11, color: '#00e676' }}>
+              🔴 LIVE
+              {currentQuality >= 0 && qualities[currentQuality] && (
+                <span style={{ marginLeft: 8, color: '#888' }}>
+                  • {qualities[currentQuality].label}
+                </span>
+              )}
+            </div>
           </div>
         </div>
-        <button
-          onClick={onClose}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#888',
-            fontSize: 24,
-            cursor: 'pointer',
-            padding: '8px 12px',
-            borderRadius: 8,
-            lineHeight: 1,
-          }}
-        >
-          ✕
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          {/* Quality button */}
+          {qualities.length > 1 && (
+            <button
+              onClick={() => setState(state === 'quality-picker' ? 'playing' : 'quality-picker')}
+              style={{
+                padding: '6px 12px',
+                borderRadius: 6,
+                border: '1px solid #2a2a3e',
+                background: '#1a1a2e',
+                color: '#aaa',
+                cursor: 'pointer',
+                fontSize: 12,
+              }}
+            >
+              ⚙️ {currentQuality === -1 ? 'Auto' : qualities[currentQuality]?.label || 'Auto'}
+            </button>
+          )}
+          <button
+            onClick={onClose}
+            style={{
+              width: 32, height: 32,
+              borderRadius: 8,
+              border: 'none',
+              background: '#ff000022',
+              color: '#ff4444',
+              cursor: 'pointer',
+              fontSize: 18,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            ✕
+          </button>
+        </div>
       </div>
 
-      {/* Video area */}
+      {/* Video Area */}
       <div style={{
         flex: 1,
-        position: 'relative',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         background: '#000',
-        overflow: 'hidden',
+        position: 'relative',
+        minHeight: 0,
       }}>
-        {/* Loading */}
-        {loading && (
+        {/* Loading overlay */}
+        {state === 'loading' && (
+          <div style={{
+            textAlign: 'center',
+            color: '#888',
+          }}>
+            <div style={{ fontSize: 40, marginBottom: 12 }}>⏳</div>
+            <div style={{ fontSize: 14 }}>Loading stream...</div>
+            <div style={{ fontSize: 11, color: '#555', marginTop: 6 }}>
+              {channel.src.substring(0, 50)}...
+            </div>
+          </div>
+        )}
+
+        {/* Error overlay */}
+        {state === 'error' && (
+          <div style={{ textAlign: 'center', padding: 40 }}>
+            <div style={{ fontSize: 40, marginBottom: 12 }}>❌</div>
+            <div style={{ fontSize: 16, color: '#ff6b6b', fontWeight: 600 }}>{errorMsg}</div>
+            <div style={{ fontSize: 12, color: '#555', marginTop: 8, wordBreak: 'break-all', maxWidth: 400 }}>
+              {channel.src}
+            </div>
+            <button
+              onClick={onClose}
+              style={{
+                marginTop: 20,
+                padding: '8px 24px',
+                borderRadius: 8,
+                border: '1px solid #2a2a3e',
+                background: '#1a1a2e',
+                color: '#aaa',
+                cursor: 'pointer',
+                fontWeight: 600,
+              }}
+            >
+              ← Balik ke daftar channel
+            </button>
+          </div>
+        )}
+
+        {/* Quality Picker overlay */}
+        {state === 'quality-picker' && (
           <div style={{
             position: 'absolute',
-            inset: 0,
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(0,0,0,0.85)',
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: 12,
-            background: '#000',
-            zIndex: 5,
+            zIndex: 20,
           }}>
             <div style={{
-              width: 40,
-              height: 40,
-              border: '3px solid #1e1e2e',
-              borderTop: '3px solid #00e676',
-              borderRadius: '50%',
-              animation: 'spin 0.8s linear infinite',
-            }} />
-            <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
-            <div style={{ color: '#555', fontSize: 13 }}>⏳ Loading stream...</div>
-            <div style={{ color: '#333', fontSize: 11, maxWidth: 300, textAlign: 'center', wordBreak: 'break-all' }}>
-              {channel.name} • {channel.reliable ? 'Official Stream' : 'IPTV Stream'}
-            </div>
-          </div>
-        )}
-
-        {/* Error */}
-        {error && (
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 16,
-            background: '#0a0a12',
-            zIndex: 5,
-          }}>
-            <div style={{ fontSize: 48, marginBottom: 8 }}>😵</div>
-            <div style={{ color: '#ff6b6b', fontSize: 15, fontWeight: 600 }}>{error}</div>
-            <div style={{ color: '#555', fontSize: 12, maxWidth: 400, textAlign: 'center' }}>
-              {channel.reliable ? (
-                'Channel official — coba refresh atau ganti channel.'
-              ) : (
-                <>
-                  Sumber IPTV mungkin mati/geo-blocked.
-                  <br />Coba pakai <strong>VPN Indonesia</strong> atau pilih channel lain.
-                </>
-              )}
-            </div>
-            <div style={{ display: 'flex', gap: 10 }}>
+              background: '#12121a',
+              borderRadius: 16,
+              border: '1px solid #1e1e2e',
+              padding: 24,
+              minWidth: 280,
+              maxWidth: 400,
+            }}>
+              <h3 style={{ margin: '0 0 16px', fontSize: 16, color: '#e0e0e0' }}>📺 Pilih Kualitas</h3>
+              
               <button
-                onClick={() => {
-                  setRetryCount(0)
-                  setError(null)
-                  setLoading(true)
-                  // Force re-mount by changing key
-                  if (hlsRef.current) {
-                    hlsRef.current.destroy()
-                    hlsRef.current = null
-                  }
-                }}
+                onClick={() => setQuality(-1)}
                 style={{
-                  padding: '10px 24px',
+                  display: 'block',
+                  width: '100%',
+                  padding: '10px 16px',
                   borderRadius: 8,
-                  border: '1px solid #00e676',
-                  background: '#00e67618',
-                  color: '#00e676',
+                  border: currentQuality === -1 ? '2px solid #00e676' : '1px solid #2a2a3e',
+                  background: currentQuality === -1 ? '#00e67615' : '#1a1a2e',
+                  color: currentQuality === -1 ? '#00e676' : '#aaa',
                   cursor: 'pointer',
-                  fontSize: 13,
                   fontWeight: 600,
+                  fontSize: 13,
+                  marginBottom: 8,
+                  textAlign: 'left',
                 }}
               >
-                🔄 Coba Lagi
+                🔄 Auto
+                {currentQuality === -1 && <span style={{ float: 'right' }}>✓</span>}
               </button>
+              
+              {qualities.map(q => (
+                <button
+                  key={q.id}
+                  onClick={() => setQuality(q.id)}
+                  style={{
+                    display: 'block',
+                    width: '100%',
+                    padding: '10px 16px',
+                    borderRadius: 8,
+                    border: currentQuality === q.id ? '2px solid #00e676' : '1px solid #2a2a3e',
+                    background: currentQuality === q.id ? '#00e67615' : '#1a1a2e',
+                    color: currentQuality === q.id ? '#00e676' : '#aaa',
+                    cursor: 'pointer',
+                    fontWeight: 600,
+                    fontSize: 13,
+                    marginBottom: 8,
+                    textAlign: 'left',
+                  }}
+                >
+                  {q.label} 
+                  {q.bitrate ? <span style={{ color: '#555', fontWeight: 400, marginLeft: 6, fontSize: 11 }}>({(q.bitrate/1000000).toFixed(1)} Mbps)</span> : ''}
+                  {currentQuality === q.id && <span style={{ float: 'right' }}>✓</span>}
+                </button>
+              ))}
+              
               <button
-                onClick={onClose}
+                onClick={() => setState('playing')}
                 style={{
-                  padding: '10px 24px',
+                  display: 'block',
+                  width: '100%',
+                  padding: '10px',
                   borderRadius: 8,
-                  border: '1px solid #333',
-                  background: '#1a1a2e',
-                  color: '#ccc',
+                  border: 'none',
+                  background: 'transparent',
+                  color: '#666',
                   cursor: 'pointer',
                   fontSize: 13,
-                  fontWeight: 600,
+                  marginTop: 8,
                 }}
               >
-                ← Kembali
+                Tutup
               </button>
             </div>
           </div>
         )}
 
-        {/* Video element — selalu render biar HLS bisa attach */}
+        {/* Video element — selalu ada, hidden kalo loading */}
         <video
           ref={videoRef}
           controls
@@ -324,39 +355,12 @@ export default function PlayerModal({ channel, onClose }) {
           style={{
             width: '100%',
             height: '100%',
+            display: state === 'playing' ? 'block' : 'none',
             maxHeight: '100vh',
             objectFit: 'contain',
-            display: error ? 'none' : 'block',
           }}
         />
       </div>
-
-      {/* Channel info bar */}
-      {!error && (
-        <div style={{
-          padding: '10px 16px',
-          background: '#0a0a12',
-          borderTop: '1px solid #1e1e2e',
-          fontSize: 11,
-          color: '#555',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexShrink: 0,
-        }}>
-          <span>📡 {channel.name} • 24/7 Live</span>
-          <span style={{ 
-            color: channel.reliable ? '#00e676' : '#ffd700',
-            fontSize: 10,
-            fontWeight: 600,
-            padding: '2px 8px',
-            borderRadius: 4,
-            background: channel.reliable ? '#00e67612' : '#ffd70012',
-          }}>
-            {channel.reliable ? '✅ Official' : '🔄 IPTV'}
-          </span>
-        </div>
-      )}
     </div>
   )
 }
