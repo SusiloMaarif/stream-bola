@@ -81,7 +81,6 @@ export default function StreamPlayer({ match, selectedSource, onSelectSource, on
             allowFullScreen
             allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
             referrerPolicy="strict-origin-when-cross-origin"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-orientation-lock allow-popups-to-escape-sandbox"
           />
         )}
       </div>
