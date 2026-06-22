@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import MatchCard from '@/components/MatchCard'
 import StreamPlayer from '@/components/StreamPlayer'
+import Channels247 from '@/components/Channels247'
+import ChannelPlayer from '@/components/ChannelPlayer'
 
 const API_BASE = 'https://api.sportsrc.org'
 
@@ -12,6 +14,7 @@ export default function Home() {
   const [error, setError] = useState(null)
   const [activeMatch, setActiveMatch] = useState(null)
   const [selectedSource, setSelectedSource] = useState(null)
+  const [activeChannel, setActiveChannel] = useState(null)
   const [search, setSearch] = useState('')
   const [filter, setFilter] = useState('all')
 
@@ -60,6 +63,10 @@ export default function Home() {
     setSelectedSource(null)
   }
 
+  const closeChannel = () => {
+    setActiveChannel(null)
+  }
+
   const filteredMatches = matches.filter(m => {
     if (search) {
       const q = search.toLowerCase()
@@ -98,6 +105,15 @@ export default function Home() {
         selectedSource={selectedSource}
         onSelectSource={setSelectedSource}
         onClose={closeMatch}
+      />
+    )
+  }
+
+  if (activeChannel) {
+    return (
+      <ChannelPlayer
+        channel={activeChannel}
+        onClose={closeChannel}
       />
     )
   }
@@ -195,13 +211,18 @@ export default function Home() {
           </div>
         )}
 
-        {/* Ad-free info */}
+        {/* Tips */}
         <div style={{ marginTop: 24, padding: '14px 16px', background: '#0d0d1a', borderRadius: 12, border: '1px solid #1a1a2e', fontSize: 12, color: '#555' }}>
           <p style={{ margin: 0, lineHeight: 1.6 }}>
             💡 <strong style={{ color: '#888' }}>Tips:</strong> Streamer bekerja ketika ada pertandingan langsung.<br/>
             🛡️ Gunakan <strong style={{ color: '#888' }}>VPN</strong> Indonesia untuk channel yang di-geo-block.<br/>
             🔄 Data pertandingan diperbarui otomatis tiap 60 detik.
           </p>
+        </div>
+
+        {/* 24/7 Channels */}
+        <div style={{ marginTop: 20 }}>
+          <Channels247 onSelectChannel={setActiveChannel} />
         </div>
       </div>
     </div>

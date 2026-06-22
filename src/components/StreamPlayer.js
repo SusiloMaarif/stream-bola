@@ -82,7 +82,7 @@ export default function StreamPlayer({ match, selectedSource, onSelectSource, on
             allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
             referrerPolicy="strict-origin-when-cross-origin"
           />
-        )}
+        ) }
       </div>
 
       {/* Source selector - bottom panel */}
