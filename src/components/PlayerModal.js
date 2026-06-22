@@ -1,346 +1,204 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
-export default function PlayerModal({ channel, onClose }) {
-  const videoRef = useRef(null)
-  const hlsRef = useRef(null)
-  const [status, setStatus] = useState('loading') // loading | playing | error
-  const [errorMsg, setErrorMsg] = useState('')
-  const [qualities, setQualities] = useState([])
-  const [currentQuality, setCurrentQuality] = useState(-1) // -1 = auto
-  const [showQualityMenu, setShowQualityMenu] = useState(false)
-  const [isFullscreen, setIsFullscreen] = useState(false)
-  const playerRef = useRef(null)
+export default function PlayerModal({ match, selectedSource, onSelectSource, onClose }) {
+  const [isLoading, setIsLoading] = useState(true)
+  const iframeRef = useRef(null)
 
-  // Build proxy URL
-  const getProxyUrl = (src) => {
-    const base = window.location.origin
-    return `${base}/api/proxy?type=m3u8&url=${encodeURIComponent(src)}`
+  const sources = match.sources || []
+  const home = match.teams?.home?.name || ''
+  const away = match.teams?.away?.name || ''
+
+  useEffect(() => {
+    setIsLoading(true)
+    const timer = setTimeout(() => setIsLoading(false), 2000)
+    return () => clearTimeout(timer)
+  }, [selectedSource])
+
+  // Group sources by channel/language
+  const groupedSources = sources.reduce((acc, src) => {
+    const key = src.language || 'Unknown'
+    if (!acc[key]) acc[key] = []
+    acc[key].push(src)
+    return acc
+  }, {})
+
+  // Extract just the channel name from language string
+  const getChannelName = (lang) => {
+    const parts = lang.split(' - ')
+    return parts.length > 1 ? parts[1].trim() : lang
   }
-
-  // Init HLS
-  useEffect(() => {
-    if (!channel || channel.type !== 'm3u8') return
-
-    setStatus('loading')
-    setErrorMsg('')
-    setQualities([])
-    setCurrentQuality(-1)
-
-    const initHls = async () => {
-      try {
-        const Hls = (await import('hls.js')).default
-
-        if (hlsRef.current) {
-          hlsRef.current.destroy()
-          hlsRef.current = null
-        }
-
-        if (!Hls.isSupported()) {
-          setStatus('error')
-          setErrorMsg('HLS tidak didukung browser ini')
-          return
-        }
-
-        const hls = new Hls({
-          enableWorker: true,
-          lowLatencyMode: true,
-          manifestLoadingTimeOut: 15000,
-          levelLoadingTimeOut: 15000,
-          fragLoadingTimeOut: 15000,
-        })
-        hlsRef.current = hls
-        hls.attachMedia(videoRef.current)
-
-        hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-          // Load via proxy biar segment di-rewrite
-          const proxyUrl = getProxyUrl(channel.src)
-          hls.loadSource(proxyUrl)
-        })
-
-        hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          // Dapatkan daftar kualitas
-          const levels = hls.levels.map((l, i) => ({
-            id: i,
-            height: l.height,
-            bitrate: l.bitrate,
-            name: l.height >= 1080 ? '1080p' :
-                  l.height >= 720 ? '720p' :
-                  l.height >= 480 ? '480p' :
-                  l.height >= 360 ? '360p' :
-                  l.height >= 240 ? '240p' : `${l.height}p`
-          }))
-          setQualities(levels)
-          setStatus('playing')
-          videoRef.current?.play().catch(() => {})
-        })
-
-        hls.on(Hls.Events.LEVEL_SWITCHED, (event, data) => {
-          setCurrentQuality(data.level)
-        })
-
-        hls.on(Hls.Events.ERROR, (event, data) => {
-          if (data.fatal) {
-            setStatus('error')
-            if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
-              setErrorMsg('Stream timeout — channel mungkin offline atau geo-blocked')
-            } else {
-              setErrorMsg('Error memuat stream. Coba channel lain.')
-            }
-          }
-        })
-      } catch (e) {
-        setStatus('error')
-        setErrorMsg('Gagal memuat player')
-      }
-    }
-
-    const timer = setTimeout(initHls, 300)
-    return () => {
-      clearTimeout(timer)
-      if (hlsRef.current) {
-        hlsRef.current.destroy()
-        hlsRef.current = null
-      }
-    }
-  }, [channel])
-
-  // Ganti kualitas
-  const changeQuality = useCallback((levelId) => {
-    if (hlsRef.current) {
-      if (levelId === -1) {
-        hlsRef.current.currentLevel = -1 // auto
-        setCurrentQuality(-1)
-      } else {
-        hlsRef.current.currentLevel = levelId
-        setCurrentQuality(levelId)
-      }
-    }
-    setShowQualityMenu(false)
-  }, [])
-
-  // Fullscreen toggle
-  const toggleFullscreen = useCallback(() => {
-    if (!playerRef.current) return
-    if (!document.fullscreenElement) {
-      playerRef.current.requestFullscreen?.()
-      setIsFullscreen(true)
-    } else {
-      document.exitFullscreen?.()
-      setIsFullscreen(false)
-    }
-  }, [])
-
-  // Close on ESC
-  useEffect(() => {
-    const handleKey = (e) => {
-      if (e.key === 'Escape') {
-        if (showQualityMenu) {
-          setShowQualityMenu(false)
-        } else {
-          onClose()
-        }
-      }
-    }
-    window.addEventListener('keydown', handleKey)
-    return () => window.removeEventListener('keydown', handleKey)
-  }, [onClose, showQualityMenu])
-
-  // Prevent body scroll
-  useEffect(() => {
-    document.body.style.overflow = 'hidden'
-    return () => { document.body.style.overflow = '' }
-  }, [])
+  const getLanguage = (lang) => {
+    const parts = lang.split(' - ')
+    return parts[0].trim()
+  }
 
   return (
     <div style={{
       position: 'fixed',
       top: 0, left: 0, right: 0, bottom: 0,
-      background: 'rgba(0,0,0,0.92)',
+      background: '#000',
+      zIndex: 1000,
       display: 'flex',
       flexDirection: 'column',
-      zIndex: 9999,
-      animation: 'fadeIn 0.2s ease',
     }}>
-      {/* ===== TOP BAR ===== */}
+      {/* Top bar */}
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '10px 16px',
+        padding: '8px 12px',
         background: '#0a0a12',
-        borderBottom: '1px solid #1a1a2e',
-        flexShrink: 0,
+        borderBottom: '1px solid #1e1e2e',
+        zIndex: 10,
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <button onClick={onClose} style={{
-            background: 'none', border: 'none', color: '#888', cursor: 'pointer',
-            fontSize: 20, padding: '4px 8px', borderRadius: 6,
-          }}>←</button>
-          <div>
-            <div style={{ fontSize: 15, fontWeight: 700 }}>{channel.logo} {channel.name}</div>
-            <div style={{ fontSize: 11, color: '#555' }}>🔴 LIVE · {channel.lang}</div>
-          </div>
-        </div>
-        <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
-          {/* Quality Selector */}
-          {status === 'playing' && qualities.length > 0 && (
-            <div style={{ position: 'relative' }}>
-              <button onClick={() => setShowQualityMenu(!showQualityMenu)} style={{
-                padding: '5px 10px',
-                borderRadius: 6,
-                border: '1px solid #333',
-                background: '#1a1a2e',
-                color: '#aaa',
-                cursor: 'pointer',
-                fontSize: 11,
-                fontWeight: 600,
-              }}>
-                {currentQuality === -1 ? 'Auto' : qualities.find(q => q.id === currentQuality)?.name || 'Auto'} ▾
-              </button>
-              {showQualityMenu && (
-                <div style={{
-                  position: 'absolute',
-                  top: '100%', right: 0, marginTop: 4,
-                  background: '#12121a',
-                  border: '1px solid #2a2a3e',
-                  borderRadius: 8,
-                  overflow: 'hidden',
-                  minWidth: 100,
-                  zIndex: 100,
-                  boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
-                }}>
-                  <button onClick={() => changeQuality(-1)} style={{
-                    width: '100%',
-                    padding: '8px 14px',
-                    border: 'none',
-                    background: currentQuality === -1 ? '#00e67620' : 'transparent',
-                    color: currentQuality === -1 ? '#00e676' : '#aaa',
-                    cursor: 'pointer',
-                    fontSize: 12,
-                    textAlign: 'left',
-                  }}>🔄 Auto</button>
-                  {qualities.map(q => (
-                    <button key={q.id} onClick={() => changeQuality(q.id)} style={{
-                      width: '100%',
-                      padding: '8px 14px',
-                      border: 'none',
-                      background: currentQuality === q.id ? '#00e67620' : 'transparent',
-                      color: currentQuality === q.id ? '#00e676' : '#aaa',
-                      cursor: 'pointer',
-                      fontSize: 12,
-                      textAlign: 'left',
-                    }}>
-                      {q.name} {q.id === 0 && '(Terendah)'} {q.id === qualities.length - 1 && '(Tertinggi)'}
-                    </button>
-                  ))}
-                </div>
-              )}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: 1, minWidth: 0 }}>
+          <button
+            onClick={onClose}
+            style={{
+              background: '#1a1a2e',
+              border: 'none',
+              color: '#aaa',
+              width: 32,
+              height: 32,
+              borderRadius: 8,
+              cursor: 'pointer',
+              fontSize: 18,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+            }}
+          >
+            ✕
+          </button>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 13, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {home} vs {away}
             </div>
-          )}
-
-          {/* Fullscreen */}
-          <button onClick={toggleFullscreen} style={{
-            padding: '5px 10px',
-            borderRadius: 6,
-            border: '1px solid #333',
-            background: '#1a1a2e',
-            color: '#aaa',
-            cursor: 'pointer',
-            fontSize: 14,
-          }}>⛶</button>
-
-          {/* Close */}
-          <button onClick={onClose} style={{
-            padding: '5px 10px',
-            borderRadius: 6,
-            border: '1px solid #ff333333',
-            background: '#ff000011',
-            color: '#ff6666',
-            cursor: 'pointer',
-            fontSize: 13,
-            fontWeight: 600,
-          }}>✕ Tutup</button>
+            {selectedSource && (
+              <div style={{ fontSize: 11, color: '#888' }}>
+                📺 {selectedSource.language}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
-      {/* ===== VIDEO PLAYER ===== */}
-      <div ref={playerRef} style={{
+      {/* Video Player Area */}
+      <div style={{
         flex: 1,
+        position: 'relative',
+        background: '#000',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'relative',
-        background: '#000',
-        minHeight: 0,
+        overflow: 'hidden',
       }}>
-        {/* Loading */}
-        {status === 'loading' && (
-          <div style={{ textAlign: 'center', padding: 40 }}>
-            <div style={{ fontSize: 48, marginBottom: 16 }}>⏳</div>
-            <div style={{ color: '#888', fontSize: 14 }}>Loading stream...</div>
-            <div style={{ color: '#555', fontSize: 12, marginTop: 6 }}>{channel.src.substring(0, 60)}...</div>
-          </div>
-        )}
-
-        {/* Error */}
-        {status === 'error' && (
-          <div style={{ textAlign: 'center', padding: 40 }}>
-            <div style={{ fontSize: 48, marginBottom: 16 }}>❌</div>
-            <div style={{ color: '#ff6b6b', fontSize: 14, fontWeight: 600 }}>{errorMsg}</div>
-            <div style={{ color: '#888', fontSize: 12, marginTop: 8 }}>{channel.name}</div>
-            <button onClick={onClose} style={{
-              marginTop: 16,
-              padding: '10px 24px',
-              borderRadius: 8,
-              border: '1px solid #333',
-              background: '#1a1a2e',
-              color: '#aaa',
-              cursor: 'pointer',
-              fontSize: 13,
-            }}>← Kembali ke daftar channel</button>
-          </div>
-        )}
-
-        {/* Video Element */}
-        <video
-          ref={videoRef}
-          controls
-          autoPlay
-          playsInline
-          style={{
-            width: '100%',
-            height: '100%',
-            maxHeight: '100vh',
-            display: status === 'playing' ? 'block' : 'none',
-            objectFit: 'contain',
+        {isLoading && (
+          <div style={{
+            position: 'absolute',
+            top: 0, left: 0, right: 0, bottom: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             background: '#000',
-          }}
-        />
+            zIndex: 5,
+            color: '#555',
+            fontSize: 14,
+          }}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: 28, marginBottom: 8 }}>⏳</div>
+              <div>Loading stream...</div>
+              {selectedSource && (
+                <div style={{ fontSize: 12, marginTop: 6, color: '#444' }}>
+                  Source: {selectedSource.language} 
+                  {selectedSource.hd ? ' • HD' : ' • SD'}
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {selectedSource && (
+          <iframe
+            key={selectedSource.id + selectedSource.streamNo}
+            ref={iframeRef}
+            src={selectedSource.embedUrl}
+            style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+            }}
+            allowFullScreen
+            allow="autoplay; encrypted-media; picture-in-picture"
+            onLoad={() => setIsLoading(false)}
+          />
+        )}
+
+        {!selectedSource && (
+          <div style={{ textAlign: 'center', color: '#555' }}>
+            <div style={{ fontSize: 28, marginBottom: 8 }}>📺</div>
+            <div style={{ fontSize: 14 }}>Pilih sumber streaming di bawah</div>
+          </div>
+        )}
       </div>
 
-      {/* Info bar */}
+      {/* Channel/Source Selector */}
       <div style={{
-        padding: '8px 16px',
         background: '#0a0a12',
-        borderTop: '1px solid #1a1a2e',
-        fontSize: 11,
-        color: '#555',
-        flexShrink: 0,
-        display: 'flex',
-        justifyContent: 'space-between',
+        borderTop: '1px solid #1e1e2e',
+        maxHeight: '35vh',
+        overflowY: 'auto',
       }}>
-        <span>🔴 LIVE · {channel.name}</span>
-        <span>Stream via {channel.type?.toUpperCase() || 'HLS'}</span>
+        <div style={{ padding: '8px 12px', borderBottom: '1px solid #1e1e2e' }}>
+          <span style={{ fontSize: 11, color: '#888', fontWeight: 600 }}>📡 Pilih Channel ({sources.length} tersedia)</span>
+        </div>
+        <div style={{ padding: '8px' }}>
+          {Object.entries(groupedSources).map(([lang, srcs]) => (
+            <div key={lang} style={{ marginBottom: 6 }}>
+              <div style={{
+                fontSize: 10,
+                color: '#666',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: 1,
+                padding: '4px 8px',
+              }}>
+                {getLanguage(lang)} — {getChannelName(lang)}
+              </div>
+              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', padding: '0 8px' }}>
+                {srcs.map((src, i) => (
+                  <button
+                    key={i}
+                    onClick={() => onSelectSource(src)}
+                    style={{
+                      padding: '6px 12px',
+                      borderRadius: 6,
+                      border: selectedSource?.id === src.id && selectedSource?.streamNo === src.streamNo
+                        ? '2px solid #00e676'
+                        : '1px solid #2a2a3e',
+                      background: selectedSource?.id === src.id && selectedSource?.streamNo === src.streamNo
+                        ? '#00e67618'
+                        : '#1a1a2e',
+                      color: selectedSource?.id === src.id && selectedSource?.streamNo === src.streamNo
+                        ? '#00e676'
+                        : '#999',
+                      cursor: 'pointer',
+                      fontWeight: 600,
+                      fontSize: 11,
+                      transition: 'all 0.2s',
+                    }}
+                  >
+                    {src.hd ? '🔷' : '🔹'} Stream {src.streamNo} {src.hd ? 'HD' : 'SD'}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-      `}</style>
     </div>
   )
 }
