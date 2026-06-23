@@ -1,0 +1,4459 @@
+{
+  "count": 742,
+  "mac": "00:1A:79:B7:2A:D0",
+  "host": "http://xp1.tv:80",
+  "channels": [
+    {
+      "id": "253082",
+      "name": "(TR)\u26a1\ufe0fTrt Spor \u1d58\u02e1\u1d57\u02b3\u1d43",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/trt_spor_tr.png",
+      "tvg": "TRT SPOR HD.tr"
+    },
+    {
+      "id": "253083",
+      "name": "(TR)\u26a1\ufe0fTrt Spor Yildiz \u1d58\u02e1\u1d57\u02b3\u1d43",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/trt_spor_tr.png",
+      "tvg": "TRT SPOR YILDIZ.tr"
+    },
+    {
+      "id": "253084",
+      "name": "(TR)\u26a1\ufe0fTrt Spor 3 \u1d58\u02e1\u1d57\u02b3\u1d43",
+      "logo": "http://62.210.222.188/MOVIE/darklogo/DarkTVLogo/Logolar/trtsporhd.png",
+      "tvg": ""
+    },
+    {
+      "id": "253085",
+      "name": "(TR)\u26a1\ufe0fA Spor \u1d58\u02e1\u1d57\u02b3\u1d43",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/a_spor_tr.png",
+      "tvg": "A SPOR HD.tr"
+    },
+    {
+      "id": "31488",
+      "name": "(TR) beIN Movies Action 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_action_01_hd.png",
+      "tvg": "beINMOVIESACTIONHD.tr"
+    },
+    {
+      "id": "33201",
+      "name": "(TR) beIN Movies Action 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_action_02_hd.png",
+      "tvg": "beINMOVIESACTION2HD.tr"
+    },
+    {
+      "id": "31490",
+      "name": "(TR) beIN Movies Family 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_family_hd.png",
+      "tvg": "beINMOVIESFAMILYHD.tr"
+    },
+    {
+      "id": "31492",
+      "name": "(TR) beIN Movies Premiere 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_premier_01_hd.png",
+      "tvg": "beINMOVIESPREMIEREHD.tr"
+    },
+    {
+      "id": "33200",
+      "name": "(TR) beIN Movies Premiere 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_premier_02_hd.png",
+      "tvg": "beINMOVIESPREMIERE2HD.tr"
+    },
+    {
+      "id": "31493",
+      "name": "(TR) beIN Movies Stars 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_stars_hd.png",
+      "tvg": "beINMOVIESSTARSHD.tr"
+    },
+    {
+      "id": "31494",
+      "name": "(TR) beIN Movies Turk 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_turk_hd.png",
+      "tvg": "beINMOVIESTURKHD.tr"
+    },
+    {
+      "id": "31496",
+      "name": "(TR) beIN Series Drama 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_series.png",
+      "tvg": "beINSERIESDRAMAHD.tr"
+    },
+    {
+      "id": "31497",
+      "name": "(TR) beIN Series 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/be_in_tr_series_scifi_hd.png",
+      "tvg": "beINSERIESSCI-FIHD.tr"
+    },
+    {
+      "id": "31498",
+      "name": "(TR) beIN Series 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/be_in_tr_series_vice_hd.png",
+      "tvg": "beINSERIESVICEHD.tr"
+    },
+    {
+      "id": "210849",
+      "name": "(TR) beIN Series 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/be_in_tr_series_scifi_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "210850",
+      "name": "(TR) beIN Series 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/be_in_tr_series_scifi_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "63099",
+      "name": "(TR) Bein Box office 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_premier_02_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "63100",
+      "name": "(TR) Bein Box Office 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_premier_02_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "63102",
+      "name": "(TR) Bein Box Office 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_movies_premier_02_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "258588",
+      "name": "(TR) TRT Spor 4K+",
+      "logo": "https://cdn.countryflags.com/thumbs/turkey/flag-400.png",
+      "tvg": ""
+    },
+    {
+      "id": "258621",
+      "name": "(TR) TRT Spor HD+",
+      "logo": "https://cdn.countryflags.com/thumbs/turkey/flag-400.png",
+      "tvg": ""
+    },
+    {
+      "id": "258589",
+      "name": "(TR) TRT Spor Yildiz 4K+",
+      "logo": "https://cdn.countryflags.com/thumbs/turkey/flag-400.png",
+      "tvg": ""
+    },
+    {
+      "id": "258620",
+      "name": "(TR) TRT Spor Yildiz HD+",
+      "logo": "https://cdn.countryflags.com/thumbs/turkey/flag-400.png",
+      "tvg": ""
+    },
+    {
+      "id": "208824",
+      "name": "(TR) Tabii Spor 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "208825",
+      "name": "(TR) Tabii Spor HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201902",
+      "name": "(TR) Tabii Spor 1 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201901",
+      "name": "(TR) Tabii Spor 1 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201900",
+      "name": "(TR) Tabii Spor 2 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201899",
+      "name": "(TR) Tabii Spor 2 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201898",
+      "name": "(TR) Tabii Spor 3 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201897",
+      "name": "(TR) Tabii Spor 3 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201896",
+      "name": "(TR) Tabii Spor 4 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201895",
+      "name": "(TR) Tabii Spor 4 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201894",
+      "name": "(TR) Tabii Spor 5 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201893",
+      "name": "(TR) Tabii Spor 5 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201892",
+      "name": "(TR) Tabii Spor 6 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201891",
+      "name": "(TR) Tabii Spor 6 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201890",
+      "name": "(TR) Tabii Spor 7 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201889",
+      "name": "(TR) Tabii Spor 7 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201888",
+      "name": "(TR) Tabii Spor 8 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201887",
+      "name": "(TR) Tabii Spor 8 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201886",
+      "name": "(TR) Tabii Spor 9 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201885",
+      "name": "(TR) Tabii Spor 9 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201884",
+      "name": "(TR) Tabii Spor 10 4K+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "201883",
+      "name": "(TR) Tabii Spor 10 HD+",
+      "logo": "https://i.hizliresim.com/f5raui8.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "256051",
+      "name": "(TR) Tivibu Spor 4K+",
+      "logo": "http://163.172.99.236/ambiti/tvkarambita/Turkey/tivibu_tr_spor.png",
+      "tvg": ""
+    },
+    {
+      "id": "13469",
+      "name": "(TR) Tivibu Spor 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/tivibu_tr_spor.png",
+      "tvg": ""
+    },
+    {
+      "id": "13470",
+      "name": "(TR) Tivibu Spor 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/tivibu_tr_spor_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "13458",
+      "name": "(TR) Tivibu Spor 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/tivibu_tr_spor_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "255772",
+      "name": "(TR) Tivibu Spor 4 4K+",
+      "logo": "http://62.210.222.188/MOVIE/darklogo/DarkTVLogo/Logolar/tivibutrspor.png",
+      "tvg": ""
+    },
+    {
+      "id": "13471",
+      "name": "(TR) Smart Spor 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/smart_spor_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "12799",
+      "name": "(TR) Smart Spor HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/smart_spor_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "14828",
+      "name": "(TR) TRT Spor 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/trt_spor_tr.png",
+      "tvg": "TRTSPOR.tr"
+    },
+    {
+      "id": "9858",
+      "name": "(TR) TRT Spor HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/trt_spor_tr.png",
+      "tvg": ""
+    },
+    {
+      "id": "102765",
+      "name": "(TR) TRT Spor Yildiz 4K+",
+      "logo": "https://picon.nxtbox.tv/satlogo/turkey/trt_spor_tr.png",
+      "tvg": ""
+    },
+    {
+      "id": "209159",
+      "name": "(TR) TRT Spor Yildiz HD+",
+      "logo": "https://picon.nxtbox.tv/satlogo/turkey/trt_spor_tr.png",
+      "tvg": ""
+    },
+    {
+      "id": "68255",
+      "name": "(TR) TRT Spor 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/trt_spor_tr.png",
+      "tvg": "TRT3.tr"
+    },
+    {
+      "id": "209161",
+      "name": "(TR) TRT Spor 3 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/trt_spor_tr.png",
+      "tvg": ""
+    },
+    {
+      "id": "214227",
+      "name": "(TR) HT Spor 4K+",
+      "logo": "http://62.210.222.188/MOVIE/darklogo/DarkTVLogo/TVLOGOLAR/Turkiye/htspor.png",
+      "tvg": ""
+    },
+    {
+      "id": "214228",
+      "name": "(TR) HT Spor HD+",
+      "logo": "http://62.210.222.188/MOVIE/darklogo/DarkTVLogo/TVLOGOLAR/Turkiye/htspor.png",
+      "tvg": ""
+    },
+    {
+      "id": "14824",
+      "name": "(TR) A Spor 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/a_spor_tr.png",
+      "tvg": "ASpor.tr"
+    },
+    {
+      "id": "92",
+      "name": "(TR) A Spor HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/a_spor_tr.png",
+      "tvg": "ASpor.tr"
+    },
+    {
+      "id": "108153",
+      "name": "(TR) S Sport+ 1 4K+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "108152",
+      "name": "(TR) S Sport+ 2 4K+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "108151",
+      "name": "(TR) S Sport+ 3 4K+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "108150",
+      "name": "(TR) S Sport+ 4 4K+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "108149",
+      "name": "(TR) S Sport+ 5 4K+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "108148",
+      "name": "(TR) S Sport+ 6 4K+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "29745",
+      "name": "(TR) S Sport+ 1 HD+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": "S Sport"
+    },
+    {
+      "id": "46640",
+      "name": "(TR) S Sport+ 2 HD+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "232158",
+      "name": "(TR) S Sport+ 3 HD+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "232159",
+      "name": "(TR) S Sport+ 4 HD+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "232160",
+      "name": "(TR) S Sport+ 5 HD+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "232161",
+      "name": "(TR) S Sport+ 6 HD+",
+      "logo": "http://ipro.tv/picons/ssport.png",
+      "tvg": ""
+    },
+    {
+      "id": "232532",
+      "name": "(TR) Ekol Sport 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "232533",
+      "name": "(TR) Ekol Sport HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "7774",
+      "name": "(TR) EuroSport 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/british_eurosport_1.png",
+      "tvg": "Eurosport.tr"
+    },
+    {
+      "id": "7877",
+      "name": "(TR) EuroSport 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/british_eurosport_2.png",
+      "tvg": "Eurosport2.tr"
+    },
+    {
+      "id": "1117",
+      "name": "(TR) Sports TV HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/sports_tv_tr.png",
+      "tvg": "SportsTV.tr"
+    },
+    {
+      "id": "63107",
+      "name": "(TR) NBA TV 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nba_tv_us.png",
+      "tvg": ""
+    },
+    {
+      "id": "122560",
+      "name": "(TR) WWE TV",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "125225",
+      "name": "(TR) Fifa E-Sport TV",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "135160",
+      "name": "(TR) UFC Osmanl\u0131 Tokad\u0131",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "27725",
+      "name": "(TR) Bein Sports Haber 4K+",
+      "logo": "http://62.210.222.188/MOVIE/darklogo/DarkTVLogo/Logolar/beinmenasports01hd.png",
+      "tvg": "beIN SPORTS HABER HD.tr"
+    },
+    {
+      "id": "245192",
+      "name": "(TR) Bein Sports 1 8K++",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "248557",
+      "name": "(TR) Bein Sports 1 8K+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "32950",
+      "name": "(TR) Bein Sports 1 4K++",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": "beIN SPORTS 1.tr"
+    },
+    {
+      "id": "1799",
+      "name": "(TR) Bein Sports 1 4K+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": "beINSPORTSHD1.tr"
+    },
+    {
+      "id": "41811",
+      "name": "(TR) Bein Sports 1 HD+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": "beINSPORTSHD1.tr"
+    },
+    {
+      "id": "1815",
+      "name": "(TR) Bein Sports 1 Yedek",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": "beIN SPORTS 1.tr"
+    },
+    {
+      "id": "42312",
+      "name": "(TR) Bein Sports 1 (low)",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": "beIN SPORTS 1.tr"
+    },
+    {
+      "id": "13478",
+      "name": "(TR) Bein Sports 2 4K+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_02_hd.png",
+      "tvg": "(TR) Bein Sports 2 4K+"
+    },
+    {
+      "id": "41810",
+      "name": "(TR) Bein Sports 2 HD+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_02_hd.png",
+      "tvg": "beIN SPORTS 2.tr"
+    },
+    {
+      "id": "23321",
+      "name": "(TR) Bein Sports 2 Yedek",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_02_hd.png",
+      "tvg": "beIN SPORTS 2.tr"
+    },
+    {
+      "id": "42313",
+      "name": "(TR) Bein Sports 2 (low)",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_02_hd.png",
+      "tvg": "beIN SPORTS 2.tr"
+    },
+    {
+      "id": "1801",
+      "name": "(TR) Bein Sports 3 4K+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_03_hd.png",
+      "tvg": "(TR) Bein Sports 3 4K+"
+    },
+    {
+      "id": "41809",
+      "name": "(TR) Bein Sports 3 HD+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_03_hd.png",
+      "tvg": "beIN SPORTS 3.tr"
+    },
+    {
+      "id": "23322",
+      "name": "(TR) Bein Sports 3 Yedek",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_03_hd.png",
+      "tvg": "beIN SPORTS 3.tr"
+    },
+    {
+      "id": "42314",
+      "name": "(TR) Bein Sports 3 (low)",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_03_hd.png",
+      "tvg": "beIN SPORTS 3.tr"
+    },
+    {
+      "id": "41808",
+      "name": "(TR) Bein Sports 4 4K+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_04_hd.png",
+      "tvg": "(TR) Bein Sports 4 4K+"
+    },
+    {
+      "id": "1989",
+      "name": "(TR) Bein Sports 4 HD+",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_04_hd.png",
+      "tvg": "beIN SPORTS 4.tr"
+    },
+    {
+      "id": "41807",
+      "name": "(TR) Bein Sports 4 (low)",
+      "logo": "https://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_04_hd.png",
+      "tvg": "beIN SPORTS 4.tr"
+    },
+    {
+      "id": "109252",
+      "name": "(TR) Bein Sports 5 4K+",
+      "logo": "http://s3.i3ns.net:2052/portal/picon/2021-06/143beddb5ede0e1f1c962d27225f73e8.png",
+      "tvg": ""
+    },
+    {
+      "id": "109251",
+      "name": "(TR) Bein Sports 5 HD+",
+      "logo": "http://s3.i3ns.net:2052/portal/picon/2021-06/143beddb5ede0e1f1c962d27225f73e8.png",
+      "tvg": ""
+    },
+    {
+      "id": "13599",
+      "name": "(TR) Bein Sports Max 1 4K+",
+      "logo": "http://sltv-icon.cms-s.com/logo/turkeyT/bein_sports_max_1.png",
+      "tvg": "beIN SPORTS MAX 1.tr"
+    },
+    {
+      "id": "15181",
+      "name": "(TR) Bein Sports Max 2 4K+",
+      "logo": "http://sltv-icon.cms-s.com/logo/turkeyT/bein_sports_max_2.png",
+      "tvg": "beIN SPORTS MAX 2.tr"
+    },
+    {
+      "id": "7872",
+      "name": "(TR) Bein IZ TV 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/be_in_tr_iz_hd.png",
+      "tvg": "beIN\u0130ZH.trD"
+    },
+    {
+      "id": "63105",
+      "name": "(TR) Bein Gurme 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey2/be_in_tr_gurme_hd.png",
+      "tvg": "beINGURMEHD.tr"
+    },
+    {
+      "id": "207293",
+      "name": "(TR) SportBox",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "9706",
+      "name": "(NL) ESPN 1 4K+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/28/nosid/hyphen/t_night?1954912976",
+      "tvg": "ESPN.nl"
+    },
+    {
+      "id": "242438",
+      "name": "(NL) ESPN 1 \u1d41\u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/28/nosid/hyphen/t_night?1795967685",
+      "tvg": "ESPN.nl"
+    },
+    {
+      "id": "242442",
+      "name": "(NL) ESPN 1 \u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/28/nosid/hyphen/t_night?1795967685",
+      "tvg": "ESPN.nl"
+    },
+    {
+      "id": "9707",
+      "name": "(NL) ESPN 2 4K+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/29/nosid/hyphen/t_night?934641255",
+      "tvg": "ESPN2.nl"
+    },
+    {
+      "id": "242439",
+      "name": "(NL) ESPN 2 \u1d41\u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/29/nosid/hyphen/t_night?248382338",
+      "tvg": "ESPN2.nl"
+    },
+    {
+      "id": "242443",
+      "name": "(NL) ESPN 2 \u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/29/nosid/hyphen/t_night?248382338",
+      "tvg": "ESPN2.nl"
+    },
+    {
+      "id": "9708",
+      "name": "(NL) ESPN 3 4K+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/30/nosid/hyphen/t_night?930119219",
+      "tvg": "ESPN3.nl"
+    },
+    {
+      "id": "242440",
+      "name": "(NL) ESPN 3 \u1d41\u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/30/nosid/hyphen/t_night?410198955",
+      "tvg": "ESPN3.nl"
+    },
+    {
+      "id": "242444",
+      "name": "(NL) ESPN 3 \u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/30/nosid/hyphen/t_night?410198955",
+      "tvg": "ESPN3.nl"
+    },
+    {
+      "id": "9758",
+      "name": "(NL) ESPN 4 4K+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/31/nosid/hyphen/t_night?1160016318",
+      "tvg": "ESPN4.nl"
+    },
+    {
+      "id": "242441",
+      "name": "(NL) ESPN 4 \u1d41\u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/31/nosid/hyphen/t_night?258394147",
+      "tvg": "ESPN4.nl"
+    },
+    {
+      "id": "242445",
+      "name": "(NL) ESPN 4 \u1d34\u1d30",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/31/nosid/hyphen/t_night?258394147",
+      "tvg": "ESPN4.nl"
+    },
+    {
+      "id": "256078",
+      "name": "(NL) ESPN Extra | Event 1",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/c/cb/ESPNExtra.png/revision/latest?cb=20200127200233",
+      "tvg": ""
+    },
+    {
+      "id": "256174",
+      "name": "(NL) ESPN Extra | Event 6",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/c/cb/ESPNExtra.png/revision/latest?cb=20200127200233",
+      "tvg": ""
+    },
+    {
+      "id": "256173",
+      "name": "(NL) ESPN Extra | Event 5",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/c/cb/ESPNExtra.png/revision/latest?cb=20200127200233",
+      "tvg": ""
+    },
+    {
+      "id": "256172",
+      "name": "(NL) ESPN Extra | Event 4",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/c/cb/ESPNExtra.png/revision/latest?cb=20200127200233",
+      "tvg": ""
+    },
+    {
+      "id": "256171",
+      "name": "(NL) ESPN Extra | Event 3",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/c/cb/ESPNExtra.png/revision/latest?cb=20200127200233",
+      "tvg": ""
+    },
+    {
+      "id": "256170",
+      "name": "(NL) ESPN Extra | Event 2",
+      "logo": "https://static.wikia.nocookie.net/logopedia/images/c/cb/ESPNExtra.png/revision/latest?cb=20200127200233",
+      "tvg": ""
+    },
+    {
+      "id": "182819",
+      "name": "(NL) Formula - F1TV - Olav Mol",
+      "logo": "https://i.ibb.co/3CJGWKJ/f1tv.png",
+      "tvg": ""
+    },
+    {
+      "id": "251057",
+      "name": "(NL) Formula - F1TV",
+      "logo": "https://i.ibb.co/3CJGWKJ/f1tv.png",
+      "tvg": ""
+    },
+    {
+      "id": "182820",
+      "name": "(NL) Formula - F1TV - Data Channel",
+      "logo": "https://i.ibb.co/3CJGWKJ/f1tv.png",
+      "tvg": ""
+    },
+    {
+      "id": "182821",
+      "name": "(NL) Formula - F1TV",
+      "logo": "https://i.ibb.co/3CJGWKJ/f1tv.png",
+      "tvg": ""
+    },
+    {
+      "id": "9772",
+      "name": "(NL) Ziggo Sport 1 4K+",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/401_ziggo-sport.svg",
+      "tvg": "ZiggoSportSelect.nl"
+    },
+    {
+      "id": "9684",
+      "name": "(NL) Ziggo Sport 1 \u1d41\u1d34\u1d30",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/401_ziggo-sport.svg",
+      "tvg": "ZiggoSport.nl"
+    },
+    {
+      "id": "2343",
+      "name": "(NL) Ziggo Sport 1 \u1d34\u1d30",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/401_ziggo-sport.svg",
+      "tvg": "ZiggoSportSelect.nl"
+    },
+    {
+      "id": "9681",
+      "name": "(NL) Ziggo Sport 2 4K+",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/402_ziggo-sport-2.svg",
+      "tvg": "ZiggoSport2.nl"
+    },
+    {
+      "id": "23",
+      "name": "(NL) Ziggo Sport 2 \u1d41\u1d34\u1d30",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/402_ziggo-sport-2.svg",
+      "tvg": "ZiggoSport2.nl"
+    },
+    {
+      "id": "21671",
+      "name": "(NL) Ziggo Sport 3 4K+",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/403_ziggo-sport-3.svg",
+      "tvg": "ZiggoSport3.nl"
+    },
+    {
+      "id": "24",
+      "name": "(NL) Ziggo Sport 3  \u1d41\u1d34\u1d30",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/403_ziggo-sport-3.svg",
+      "tvg": "ZiggoSport3.nl"
+    },
+    {
+      "id": "21670",
+      "name": "(NL) Ziggo Sport 4 4K+",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/404_ziggo-sport-4.svg",
+      "tvg": "ZiggoSport4.nl"
+    },
+    {
+      "id": "934",
+      "name": "(NL) Ziggo Sport 4 \u1d41\u1d34\u1d30",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/404_ziggo-sport-4.svg",
+      "tvg": "ZiggoSport4.nl"
+    },
+    {
+      "id": "1794",
+      "name": "(NL) Ziggo Sport 5 4K+",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/405_ziggo-sport-5.svg",
+      "tvg": "ZiggoSport5.nl"
+    },
+    {
+      "id": "248134",
+      "name": "(NL) Ziggo Sport 5 \u1d41\u1d34\u1d30",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/405_ziggo-sport-5.svg",
+      "tvg": "ZiggoSport5.nl"
+    },
+    {
+      "id": "1795",
+      "name": "(NL) Ziggo Sport 6 4K+",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/406_ziggo-sport-6.svg",
+      "tvg": "ZiggoSport6.nl"
+    },
+    {
+      "id": "248135",
+      "name": "(NL) Ziggo Sport 6 \u1d41\u1d34\u1d30",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/406_ziggo-sport-6.svg",
+      "tvg": "ZiggoSport6.nl"
+    },
+    {
+      "id": "248136",
+      "name": "(NL) Ziggo Sport Extra 4K+",
+      "logo": "https://www.ziggo.nl/content/dam/ziggo/entertainment/img/zenderoverzicht/svg_logos/401_ziggo-sport.svg",
+      "tvg": "ZiggoSportExtra.nl"
+    },
+    {
+      "id": "9711",
+      "name": "(NL) Eurosport 1 4K+",
+      "logo": "https://i.ibb.co/SXR5wztZ/eurosport1.png",
+      "tvg": "Eurosport1.nl"
+    },
+    {
+      "id": "9712",
+      "name": "(NL) Eurosport 2 4K+",
+      "logo": "https://i.ibb.co/Kcxt3YGG/eurosport2.png",
+      "tvg": "Eurosport2.nl"
+    },
+    {
+      "id": "99456",
+      "name": "(NL) Viaplay Formula 1 4K+",
+      "logo": "https://i.ibb.co/s9nrjwfW/viaplay-f1.png",
+      "tvg": "ViaplayTV+.nl"
+    },
+    {
+      "id": "243819",
+      "name": "(NL) Viaplay Formula 1  (Olav Mol) 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "101151",
+      "name": "(NL) Viaplay Formula 1 4K+ (Backup)",
+      "logo": "https://i.ibb.co/s9nrjwfW/viaplay-f1.png",
+      "tvg": ""
+    },
+    {
+      "id": "127797",
+      "name": "(NL) F1 Viaplay Replay Trainingen",
+      "logo": "https://i.ibb.co/fzVzLq0h/viaplay-f1-olav.png",
+      "tvg": ""
+    },
+    {
+      "id": "127796",
+      "name": "(NL) F1 Viaplay Replay Kwalificaties",
+      "logo": "https://i.ibb.co/fzVzLq0h/viaplay-f1-olav.png",
+      "tvg": ""
+    },
+    {
+      "id": "127256",
+      "name": "(NL) F1 Viaplay Replay Race",
+      "logo": "https://i.ibb.co/fzVzLq0h/viaplay-f1-olav.png",
+      "tvg": ""
+    },
+    {
+      "id": "108218",
+      "name": "UFC Event 1",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108217",
+      "name": "UFC Event 2",
+      "logo": "http://tv.iptvboss.net/ch_logo/UFC_Logo.svg.png",
+      "tvg": ""
+    },
+    {
+      "id": "108216",
+      "name": "UFC Event 3",
+      "logo": "http://tv.iptvboss.net/ch_logo/UFC_Logo.svg.png",
+      "tvg": ""
+    },
+    {
+      "id": "108215",
+      "name": "UFC Event 4",
+      "logo": "http://tv.iptvboss.net/ch_logo/UFC_Logo.svg.png",
+      "tvg": ""
+    },
+    {
+      "id": "108214",
+      "name": "UFC Event 5",
+      "logo": "http://tv.iptvboss.net/ch_logo/UFC_Logo.svg.png",
+      "tvg": ""
+    },
+    {
+      "id": "108213",
+      "name": "UFC Event 6",
+      "logo": "http://sltv-logo.cms-s.com/logo/USA/PPV%20Channels.png",
+      "tvg": ""
+    },
+    {
+      "id": "108212",
+      "name": "UFC Event 7",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108211",
+      "name": "UFC Event 8",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108210",
+      "name": "UFC Event 9",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108209",
+      "name": "UFC Event 10",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108208",
+      "name": "UFC Event 11",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108207",
+      "name": "UFC Event 12",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108206",
+      "name": "UFC Event 13",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108205",
+      "name": "UFC Event 14",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "108204",
+      "name": "UFC Event 15",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "222143",
+      "name": "(NL) DAZN Event 1 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "222144",
+      "name": "(NL) DAZN Event 2 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "222145",
+      "name": "(NL) DAZN Event 3 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "222146",
+      "name": "(NL) DAZN Event 4 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "222147",
+      "name": "(NL) DAZN Event 5 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "222148",
+      "name": "(NL) DAZN Event 6 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "222149",
+      "name": "(NL) DAZN Event 7 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "222150",
+      "name": "(NL) DAZN Event 8 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/60/nosid/hyphen/t_night?384364592",
+      "tvg": ""
+    },
+    {
+      "id": "122559",
+      "name": "(NL) WWE TV",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "125226",
+      "name": "(NL) Fifa E-Sport TV",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "135161",
+      "name": "(NL) UFC Power Slap",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "65657",
+      "name": "(BE) Play Sports 1 4K+",
+      "logo": "http://myking.best/ch_logo/PLAYSPORTS.png",
+      "tvg": "PlaySportsHD1.be"
+    },
+    {
+      "id": "66524",
+      "name": "(BE) Play Sports 2 4K+",
+      "logo": "http://myking.best/ch_logo/PLAYSPORTS.png",
+      "tvg": "PlaySportsHD2.be"
+    },
+    {
+      "id": "48789",
+      "name": "(BE) Play Sports 3 4K+",
+      "logo": "http://myking.best/ch_logo/PLAYSPORTS.png",
+      "tvg": "Play Sports HD3"
+    },
+    {
+      "id": "40242",
+      "name": "(BE) DAZN Sports 1 4K+",
+      "logo": "http://62.210.222.188/darklogo/DarkTVLogo/Logolar/dazn1hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "40243",
+      "name": "(BE) DAZN Sports 2 4K+",
+      "logo": "http://62.210.222.188/darklogo/DarkTVLogo/Logolar/dazn2hd.png",
+      "tvg": "Eleven Sports 2"
+    },
+    {
+      "id": "65656",
+      "name": "(BE) DAZN Sports 3 4K+",
+      "logo": "http://62.210.222.188/darklogo/DarkTVLogo/Logolar/dazn3hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "66512",
+      "name": "(BE) DAZN Pro League 1 4K+",
+      "logo": "http://62.210.222.188/darklogo/DarkTVLogo/Logolar/dazn1hd.png",
+      "tvg": "ElevenProLeague1NL.be"
+    },
+    {
+      "id": "66513",
+      "name": "(BE) DAZN Pro League 2 4K+",
+      "logo": "http://62.210.222.188/darklogo/DarkTVLogo/Logolar/dazn2hd.png",
+      "tvg": "ElevenProLeague2NL.be"
+    },
+    {
+      "id": "217954",
+      "name": "(BE) DAZN Pro League 3 4K+",
+      "logo": "http://62.210.222.188/darklogo/DarkTVLogo/Logolar/dazn3hd.png",
+      "tvg": "ElevenProLeague3NL.be"
+    },
+    {
+      "id": "253465",
+      "name": "(BE) DAZN Event 1 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5258",
+      "tvg": ""
+    },
+    {
+      "id": "253466",
+      "name": "(BE) DAZN Event 2 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5259",
+      "tvg": ""
+    },
+    {
+      "id": "253467",
+      "name": "(BE) DAZN Event 3 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5260",
+      "tvg": ""
+    },
+    {
+      "id": "253468",
+      "name": "(BE) DAZN Event 4 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5261",
+      "tvg": ""
+    },
+    {
+      "id": "253469",
+      "name": "(BE) DAZN Event 5 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5262",
+      "tvg": ""
+    },
+    {
+      "id": "253470",
+      "name": "(BE) DAZN Event 6 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5263",
+      "tvg": ""
+    },
+    {
+      "id": "253471",
+      "name": "(BE) DAZN Event 7 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5264",
+      "tvg": ""
+    },
+    {
+      "id": "253472",
+      "name": "(BE) DAZN Event 8 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5265",
+      "tvg": ""
+    },
+    {
+      "id": "253473",
+      "name": "(BE) DAZN Event 9 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5266",
+      "tvg": ""
+    },
+    {
+      "id": "253474",
+      "name": "(BE) DAZN Event 10 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5267",
+      "tvg": ""
+    },
+    {
+      "id": "253475",
+      "name": "(BE) DAZN Event 11 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5268",
+      "tvg": ""
+    },
+    {
+      "id": "253476",
+      "name": "(BE) DAZN Event 12 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5269",
+      "tvg": ""
+    },
+    {
+      "id": "253477",
+      "name": "(BE) DAZN Event 13 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5270",
+      "tvg": ""
+    },
+    {
+      "id": "253478",
+      "name": "(BE) DAZN Event 14 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5271",
+      "tvg": ""
+    },
+    {
+      "id": "253479",
+      "name": "(BE) DAZN Event 15 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5272",
+      "tvg": ""
+    },
+    {
+      "id": "253480",
+      "name": "(BE) DAZN Event 16 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5273",
+      "tvg": ""
+    },
+    {
+      "id": "253481",
+      "name": "(BE) DAZN Event 17 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5274",
+      "tvg": ""
+    },
+    {
+      "id": "253482",
+      "name": "(BE) DAZN Event 18 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5275",
+      "tvg": ""
+    },
+    {
+      "id": "253483",
+      "name": "(BE) DAZN Event 19 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5276",
+      "tvg": ""
+    },
+    {
+      "id": "253484",
+      "name": "(BE) DAZN Event 20 \u029f\u1d0f\u1d04\u1d00\u029f \u1d20\u026a\u1d18",
+      "logo": "https://cms.iptvservicenijmegen.nl/download/logo/NXTBOX/UsSEBwDxkQ/5277",
+      "tvg": ""
+    },
+    {
+      "id": "141822",
+      "name": "(BE) Eurosport 1 4K+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/eurosport%201%20hd.png",
+      "tvg": "Eurosport1.nl"
+    },
+    {
+      "id": "141823",
+      "name": "(BE) Eurosport 2 4K+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/eurosport%202%20hd%20xtra.png",
+      "tvg": "Eurosport2.nl"
+    },
+    {
+      "id": "30673",
+      "name": "(BE) VOOsport World 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/be/voosportworld1.png",
+      "tvg": "VOOsportWorld1.be"
+    },
+    {
+      "id": "30671",
+      "name": "(BE) VOOsport World 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/be/voosportworld2.png",
+      "tvg": "VOOsportWorld2.be"
+    },
+    {
+      "id": "30670",
+      "name": "(BE) VOOsport World 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/be/voosport2.png",
+      "tvg": "VOOsportWorld3.be"
+    },
+    {
+      "id": "180565",
+      "name": "(BE) Sport 10 4K+",
+      "logo": "",
+      "tvg": "Sport10.be"
+    },
+    {
+      "id": "135156",
+      "name": "(DE) Dragonball Z Sammlung",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "220171",
+      "name": "(DE) DYN Sport 1 4K+",
+      "logo": "https://i.ibb.co/F4R342Ww/DYN-SPORT.png",
+      "tvg": ""
+    },
+    {
+      "id": "220172",
+      "name": "(DE) DYN Sport 2 4K+",
+      "logo": "https://i.ibb.co/F4R342Ww/DYN-SPORT.png",
+      "tvg": ""
+    },
+    {
+      "id": "220173",
+      "name": "(DE) DYN Sport 3 4K+",
+      "logo": "https://i.ibb.co/F4R342Ww/DYN-SPORT.png",
+      "tvg": ""
+    },
+    {
+      "id": "220174",
+      "name": "(DE) DYN Sport 4 4K+",
+      "logo": "https://i.ibb.co/F4R342Ww/DYN-SPORT.png",
+      "tvg": ""
+    },
+    {
+      "id": "220175",
+      "name": "(DE) DYN Sport 5 4K+",
+      "logo": "https://i.ibb.co/F4R342Ww/DYN-SPORT.png",
+      "tvg": ""
+    },
+    {
+      "id": "15927",
+      "name": "(DE) Eurosport 1 UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/eurosport_fr_1_hd.png",
+      "tvg": "Eurosport1.de"
+    },
+    {
+      "id": "15928",
+      "name": "(DE) Eurosport 2 HD",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/eurosport_fr_2_hd.png",
+      "tvg": "Eurosport2.de"
+    },
+    {
+      "id": "187721",
+      "name": "(DE) More Than Sport TV UHD",
+      "logo": "http://itekpro.xyz/picons/magentasportde.png",
+      "tvg": "MorethanSportsTV.de"
+    },
+    {
+      "id": "28626",
+      "name": "(DE) Sportdigital Fussball UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sport_digital_tv_de_hd.png",
+      "tvg": "sportdigital.de"
+    },
+    {
+      "id": "239145",
+      "name": "(DE) Sportdigital 1+ UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sport_digital_tv_de_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "92407",
+      "name": "(DE) Auto Motor Sport Channel UHD",
+      "logo": "http://logo.kll1ll120qazwed.site/logo/germanynew/auto_motor_sport_channel.png",
+      "tvg": "AutoMotorSport.de"
+    },
+    {
+      "id": "187768",
+      "name": "(DE) Servus TV Motorsport UHD",
+      "logo": "http://ipro.tv/picons/servustv.png",
+      "tvg": "ServusHD.de"
+    },
+    {
+      "id": "9899",
+      "name": "(DE) Sport1 UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sport1_de_hd.png",
+      "tvg": "Sport1HD.de"
+    },
+    {
+      "id": "237946",
+      "name": "(DE) DAZN 1 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2196/nosid/hyphen/t_night?1833121270",
+      "tvg": ""
+    },
+    {
+      "id": "183487",
+      "name": "(DE) DAZN 1 4K+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2196/nosid/hyphen/t_night?1833121270",
+      "tvg": "DAZN1.de"
+    },
+    {
+      "id": "37069",
+      "name": "(DE) DAZN 1 HD+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2196/nosid/hyphen/t_night?1833121270",
+      "tvg": "DAZN1.de"
+    },
+    {
+      "id": "237947",
+      "name": "(DE) DAZN 2 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2197/nosid/hyphen/t_night?887002254",
+      "tvg": ""
+    },
+    {
+      "id": "183488",
+      "name": "(DE) DAZN 2 4K+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2197/nosid/hyphen/t_night?887002254",
+      "tvg": "DAZN2.de"
+    },
+    {
+      "id": "37070",
+      "name": "(DE) DAZN 2 HD+",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2197/nosid/hyphen/t_night?887002254",
+      "tvg": "DAZN2.de"
+    },
+    {
+      "id": "237962",
+      "name": "(DE) DAZN Event 1 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237949",
+      "name": "(DE) DAZN Event 2 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237950",
+      "name": "(DE) DAZN Event 3 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237951",
+      "name": "(DE) DAZN Event 4 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237952",
+      "name": "(DE) DAZN Event 5 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237953",
+      "name": "(DE) DAZN Event 6 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237954",
+      "name": "(DE) DAZN Event 7 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237955",
+      "name": "(DE) DAZN Event 8 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237956",
+      "name": "(DE) DAZN Event 9 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237957",
+      "name": "(DE) DAZN Event 10 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237958",
+      "name": "(DE) DAZN Event 11 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237959",
+      "name": "(DE) DAZN Event 12 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237960",
+      "name": "(DE) DAZN Event 13 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "237961",
+      "name": "(DE) DAZN Event 14 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "238481",
+      "name": "(DE) DAZN Event 15 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "238482",
+      "name": "(DE) DAZN Event 16 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "238483",
+      "name": "(DE) DAZN Event 17 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "238484",
+      "name": "(DE) DAZN Event 18 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2198/nosid/hyphen/t_night?1526013431",
+      "tvg": ""
+    },
+    {
+      "id": "183490",
+      "name": "(DE) DAZN RISE 4K+",
+      "logo": "https://i.ibb.co/GxsbvQw/dazn-rise.png",
+      "tvg": "DAZNRise.de"
+    },
+    {
+      "id": "183489",
+      "name": "(DE) DAZN FAST 4K+",
+      "logo": "https://i.ibb.co/GVnnH9G/dazn-fast.png",
+      "tvg": "DAZNFast.de"
+    },
+    {
+      "id": "238384",
+      "name": "(DE) DAZN Rally TV \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238386",
+      "name": "(DE) DAZN NBA \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "238387",
+      "name": "(DE) DAZN NFL 2 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238388",
+      "name": "(DE) DAZN NFL 3 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238389",
+      "name": "(DE) DAZN NFL 4 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238390",
+      "name": "(DE) DAZN NFL 5 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238391",
+      "name": "(DE) DAZN NFL 6 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238392",
+      "name": "(DE) DAZN NFL 7 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238393",
+      "name": "(DE) DAZN NFL 8 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238394",
+      "name": "(DE) DAZN NFL 9 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238395",
+      "name": "(DE) DAZN BILLIARD TV \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "238396",
+      "name": "(DE) DAZN NFL 11 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2260/nosid/hyphen/t_night?2001737100",
+      "tvg": ""
+    },
+    {
+      "id": "238397",
+      "name": "(DE) DAZN NFL 12 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2273/nosid/hyphen/t_night?1311757339",
+      "tvg": ""
+    },
+    {
+      "id": "238398",
+      "name": "(DE) DAZN NFL 13 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "https://cms.iptvservicenijmegen.nl/remote_server/get_logo/2273/nosid/hyphen/t_night?1311757339",
+      "tvg": ""
+    },
+    {
+      "id": "108147",
+      "name": "(DE) RTL+ Sport Live 1",
+      "logo": "https://excpicon.cfd/de/rtl.png",
+      "tvg": ""
+    },
+    {
+      "id": "108146",
+      "name": "(DE) RTL Sport Event 2 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/rtl-plus-sport-300x164.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "108145",
+      "name": "(DE) RTL Sport Event 3 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/rtl-plus-sport-300x164.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "108144",
+      "name": "(DE) RTL Sport Event 4 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/rtl-plus-sport-300x164.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "108143",
+      "name": "(DE) RTL Sport Event 5 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/rtl-plus-sport-300x164.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "108142",
+      "name": "(DE) RTL Sport Event 6 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/rtl-plus-sport-300x164.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "60254",
+      "name": "(DE) MS Sport UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": ""
+    },
+    {
+      "id": "158822",
+      "name": "(DE) Magenta Sport UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": ""
+    },
+    {
+      "id": "71464",
+      "name": "(DE) Magenta Sport 1 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 1 - myTeamTV"
+    },
+    {
+      "id": "71465",
+      "name": "(DE) Magenta Sport 2 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 2 - myTeamTV"
+    },
+    {
+      "id": "71466",
+      "name": "(DE) Magenta Sport 3 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "MYSPORTS3D.ch"
+    },
+    {
+      "id": "71467",
+      "name": "(DE) Magenta Sport 4 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "MYSPORTS4D.ch"
+    },
+    {
+      "id": "71468",
+      "name": "(DE) Magenta Sport 5 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "MYSPORTS5D.ch"
+    },
+    {
+      "id": "71469",
+      "name": "(DE) Magenta Sport 6 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "MYSPORTS6D.ch"
+    },
+    {
+      "id": "71485",
+      "name": "(DE) Magenta Sport 7 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "MYSPORTS7D.ch"
+    },
+    {
+      "id": "71486",
+      "name": "(DE) Magenta Sport 8 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "MYSPORTS8D.ch"
+    },
+    {
+      "id": "46608",
+      "name": "(DE) Magenta Sport 9 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "MYSPORTS9D.ch"
+    },
+    {
+      "id": "46610",
+      "name": "(DE) Magenta Sport 10 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 10 - myTeamTV"
+    },
+    {
+      "id": "46611",
+      "name": "(DE) Magenta Sport 11 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": ""
+    },
+    {
+      "id": "46612",
+      "name": "(DE) Magenta Sport 13 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 13 - myTeamTV"
+    },
+    {
+      "id": "180583",
+      "name": "(DE) Magenta Sport 14 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 14 - myTeamTV"
+    },
+    {
+      "id": "180586",
+      "name": "(DE) Magenta Sport 15 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 15 - myTeamTV"
+    },
+    {
+      "id": "180587",
+      "name": "(DE) Magenta Sport 16 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 16 - myTeamTV"
+    },
+    {
+      "id": "180589",
+      "name": "(DE) Magenta Sport 17 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 17 - myTeamTV"
+    },
+    {
+      "id": "180590",
+      "name": "(DE) Magenta Sport 18 myTeamTV UHD",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/de/magenta-sport-340px.png",
+      "tvg": "Sport 18 - myTeamTV"
+    },
+    {
+      "id": "122561",
+      "name": "(DE) WWE TV",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "125227",
+      "name": "(DE) Fifa E-Sport TV",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "135159",
+      "name": "(DE) UFC Power Slap",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "15946",
+      "name": "(DE) Sky Sport News 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_news_hd.png",
+      "tvg": "SkySportNewsHD.de"
+    },
+    {
+      "id": "86526",
+      "name": "(DE) Sky Sport F1 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/SKYSPORTSF1.png",
+      "tvg": ""
+    },
+    {
+      "id": "106441",
+      "name": "(DE) Sky Sport Top Event 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "106443",
+      "name": "(DE) Sky Sport Premier League 4K+",
+      "logo": "https://picon.nxtbox.tv/own/de/Sky-Sport-Premier-League.png",
+      "tvg": ""
+    },
+    {
+      "id": "106445",
+      "name": "(DE) Sky Sport Mix 4K+",
+      "logo": "https://i.postimg.cc/SQfmV2KF/Sky-Sport-Mix.png",
+      "tvg": "Sky Sport Mix"
+    },
+    {
+      "id": "106444",
+      "name": "(DE) Sky Sport Golf 4K+",
+      "logo": "https://asiagrandiptv.us/logo//skysportgolf.png",
+      "tvg": "Sky Sport Golf"
+    },
+    {
+      "id": "106442",
+      "name": "(DE) Sky Sport Tennis 4K+",
+      "logo": "https://i.postimg.cc/90VQrPb2/Sky-Sport-Tennis.png",
+      "tvg": "Sky Sport Tennis"
+    },
+    {
+      "id": "15926",
+      "name": "(DE) Sky Sport Austria 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria.de"
+    },
+    {
+      "id": "77871",
+      "name": "(DE) SKY Sport Austria 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria2.at"
+    },
+    {
+      "id": "77872",
+      "name": "(DE) SKY Sport Austria 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria3.at"
+    },
+    {
+      "id": "94866",
+      "name": "(DE) Sky Sport Austria 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria4.at"
+    },
+    {
+      "id": "95374",
+      "name": "(DE) Sky Sport Austria 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria5.at"
+    },
+    {
+      "id": "95375",
+      "name": "(DE) Sky Sport Austria 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria6.at"
+    },
+    {
+      "id": "95376",
+      "name": "(DE) Sky Sport Austria 7 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria7.at"
+    },
+    {
+      "id": "28546",
+      "name": "(DE) Sky Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_1.png",
+      "tvg": "SkySport1.de"
+    },
+    {
+      "id": "15943",
+      "name": "(DE) Sky Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_2.png",
+      "tvg": "SkySport2.de"
+    },
+    {
+      "id": "16084",
+      "name": "(DE) Sky Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport-hd_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "16086",
+      "name": "(DE) Sky Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_4.png",
+      "tvg": ""
+    },
+    {
+      "id": "16088",
+      "name": "(DE) Sky Sport 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_5.png",
+      "tvg": ""
+    },
+    {
+      "id": "16090",
+      "name": "(DE) Sky Sport 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_6.png",
+      "tvg": ""
+    },
+    {
+      "id": "16092",
+      "name": "(DE) Sky Sport 7 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_7.png",
+      "tvg": ""
+    },
+    {
+      "id": "16068",
+      "name": "(DE) Sky Sport 8 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_8.png",
+      "tvg": ""
+    },
+    {
+      "id": "16070",
+      "name": "(DE) Sky Sport 9 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_9.png",
+      "tvg": ""
+    },
+    {
+      "id": "16072",
+      "name": "(DE) Sky Sport 10 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "16094",
+      "name": "(DE) Sky Sport 11 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_11.png",
+      "tvg": ""
+    },
+    {
+      "id": "182",
+      "name": "(DE) Sky Sport 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_1.png",
+      "tvg": "SkySport1.de"
+    },
+    {
+      "id": "183",
+      "name": "(DE) Sky Sport 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_sport_hd_2.png",
+      "tvg": "SkySport2.de"
+    },
+    {
+      "id": "95874",
+      "name": "(DE) Sky Sport 3 HD+",
+      "logo": "http://109.104.153.235:443/DarkTVLogo/Logolar/skysport3hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "95872",
+      "name": "(DE) Sky Sport 4 HD+",
+      "logo": "http://109.104.153.235:443/DarkTVLogo/Logolar/skysport4hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "95871",
+      "name": "(DE) Sky Sport 5 HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "95870",
+      "name": "(DE) Sky Sport 6 HD+",
+      "logo": "http://109.104.153.235:443/DarkTVLogo/Logolar/skysport6hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "95869",
+      "name": "(DE) Sky Sport 7 HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "95868",
+      "name": "(DE) Sky Sport 8 HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "95867",
+      "name": "(DE) Sky Sport 9 HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "95866",
+      "name": "(DE) Sky Sport 10 HD+",
+      "logo": "http://109.104.153.235:443/DarkTVLogo/Logolar/skysport4hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "95865",
+      "name": "(DE) Sky Sport 11 HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "165862",
+      "name": "(AU) Sky Sport Austria 1 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria.de"
+    },
+    {
+      "id": "165865",
+      "name": "(AU) Sky Sport Austria 2 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria2.at"
+    },
+    {
+      "id": "165867",
+      "name": "(AU) Sky Sport Austria 3 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria3.at"
+    },
+    {
+      "id": "165868",
+      "name": "(AU) Sky Sport Austria 4 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria4.at"
+    },
+    {
+      "id": "165869",
+      "name": "(AU) Sky Sport Austria 5 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria5.at"
+    },
+    {
+      "id": "165870",
+      "name": "(AU) Sky Sport Austria 6 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria6.at"
+    },
+    {
+      "id": "165871",
+      "name": "(AU) Sky Sport Austria 7 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/germany/sky_de_sport_austria_hd.png",
+      "tvg": "SkySportAustria7.at"
+    },
+    {
+      "id": "28127",
+      "name": "(AU) ORF Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/oo/orf_sport_plus.png",
+      "tvg": "ORFSport.at"
+    },
+    {
+      "id": "28123",
+      "name": "(AU) Sport1+ 4K",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport1_de.png",
+      "tvg": "SPORT1plus.de"
+    },
+    {
+      "id": "207856",
+      "name": "(AU) ORF Sport+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/oo/orf_sport_plus.png",
+      "tvg": "ORFSport.at"
+    },
+    {
+      "id": "151",
+      "name": "(FR) TF1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/tf1_hd.png",
+      "tvg": "TF1 HD.carab"
+    },
+    {
+      "id": "143124",
+      "name": "(FR) TF1 Series Films 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france2/hd1_fr.png",
+      "tvg": "TF1 SERIES FILMS.carab"
+    },
+    {
+      "id": "158",
+      "name": "(FR) beIN Sports 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_01_hd.png",
+      "tvg": "beINSport1.fr"
+    },
+    {
+      "id": "159",
+      "name": "(FR) beIN Sports 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/turkey/be_in_tr_sports_02_hd.png",
+      "tvg": "beINSport2.fr"
+    },
+    {
+      "id": "1219",
+      "name": "(FR) beIN Sports 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/be_in_mena_sports_03_hd.png",
+      "tvg": "beINSport3.fr"
+    },
+    {
+      "id": "19331",
+      "name": "(FR) beIN Sport Max 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/be_in_mena_sports_max_04_hd.png",
+      "tvg": "BeInSportMax4.fr"
+    },
+    {
+      "id": "19330",
+      "name": "(FR) beIN Sport Max 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/be_in_mena_sports_max_05_hd.png",
+      "tvg": "BeInSportMax5.fr"
+    },
+    {
+      "id": "19329",
+      "name": "(FR) beIN Sport Max 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/be_in_mena_sports_max_06_hd.png",
+      "tvg": "BeInSportMax6.fr"
+    },
+    {
+      "id": "19328",
+      "name": "(FR) beIN Sport Max 7 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/be_in_mena_sports_max_07_hd.png",
+      "tvg": "BeInSportMax7.fr"
+    },
+    {
+      "id": "19327",
+      "name": "(FR) beIN Sport Max 8 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/be_in_mena_sports_max_08_hd.png",
+      "tvg": "BeInSportMax8.fr"
+    },
+    {
+      "id": "63135",
+      "name": "(FR) Bein Sports Max 9 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france2/be_in_mena_sports_max_09_hd.png",
+      "tvg": "BeInSportMax9.fr"
+    },
+    {
+      "id": "63136",
+      "name": "(FR) Bein Sports Max 10 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france2/be_in_mena_sports_max_10_hd.png",
+      "tvg": "BeInSportMax10.fr"
+    },
+    {
+      "id": "19333",
+      "name": "(FR) RMC Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/rr/rmc-sport-1-fr.png",
+      "tvg": "RMCSport1.fr"
+    },
+    {
+      "id": "19332",
+      "name": "(FR) RMC Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/rr/rmc-sport-2-fr.png",
+      "tvg": "RMCSport2.fr"
+    },
+    {
+      "id": "31693",
+      "name": "(FR) RMC Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/rr/rmc-sport-3-fr.png",
+      "tvg": "RMCSport3.fr"
+    },
+    {
+      "id": "63153",
+      "name": "(FR) RMC Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/rr/rmc-sport-4-fr.png",
+      "tvg": "RMCSport4.fr"
+    },
+    {
+      "id": "63138",
+      "name": "(FR) RMC Sports 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/rr/rmc-sport-1-fr.png",
+      "tvg": ""
+    },
+    {
+      "id": "63139",
+      "name": "(FR) RMC Sports 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/rr/rmc-sport-2-fr.png",
+      "tvg": ""
+    },
+    {
+      "id": "157",
+      "name": "(FR) Canal+ Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/canalplus_fr_sport.png",
+      "tvg": "CANALplusSPORT.fr"
+    },
+    {
+      "id": "143160",
+      "name": "(FR) Canal+ Formula 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/canalplus_fr_hd.png",
+      "tvg": "C+Formula1.fr"
+    },
+    {
+      "id": "579",
+      "name": "(FR) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/eurosport_fr_1_hd.png",
+      "tvg": "Eurosport1.fr"
+    },
+    {
+      "id": "7518",
+      "name": "(FR) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france/eurosport_fr_2_hd.png",
+      "tvg": "Eurosport2.fr"
+    },
+    {
+      "id": "143162",
+      "name": "(FR) Golf + Channel 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france2/canalplus_fr_golf_plus_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "7485",
+      "name": "(FR) Golf+ 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/france2/canalplus_fr_golf_plus_hd.png",
+      "tvg": "Golfplus.fr"
+    },
+    {
+      "id": "143168",
+      "name": "(FR) Multisport 1 4K+",
+      "logo": "http://i.postimg.cc/jSW-FjyXf/multisports.png",
+      "tvg": ""
+    },
+    {
+      "id": "143169",
+      "name": "(FR) Multisport 2 4K+",
+      "logo": "http://i.postimg.cc/jSW-FjyXf/multisports.png",
+      "tvg": ""
+    },
+    {
+      "id": "143170",
+      "name": "(FR) Multisport 3 4K+",
+      "logo": "http://i.postimg.cc/jSW-FjyXf/multisports.png",
+      "tvg": ""
+    },
+    {
+      "id": "143171",
+      "name": "(FR) Multisport 4 4K+",
+      "logo": "http://i.postimg.cc/jSW-FjyXf/multisports.png",
+      "tvg": ""
+    },
+    {
+      "id": "143172",
+      "name": "(FR) Multisport 5 4K+",
+      "logo": "http://i.postimg.cc/jSW-FjyXf/multisports.png",
+      "tvg": ""
+    },
+    {
+      "id": "143173",
+      "name": "(FR) Multisport 6 4K+",
+      "logo": "http://i.postimg.cc/jSW-FjyXf/multisports.png",
+      "tvg": ""
+    },
+    {
+      "id": "24906",
+      "name": "(CH) Teleclub Sport 1",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Switzerland/TELECLUB.PNG.jpeg",
+      "tvg": ""
+    },
+    {
+      "id": "62997",
+      "name": "(CH) Teleclub Sport 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/ch/TC_Sport_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "117793",
+      "name": "(CH) Blue Sport 1 4k+",
+      "logo": "",
+      "tvg": "MYSPORTS1D.ch"
+    },
+    {
+      "id": "117794",
+      "name": "(CH) Blue Sport 2 4k+",
+      "logo": "",
+      "tvg": "blueSport2.ch"
+    },
+    {
+      "id": "534",
+      "name": "(RS) Arena Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-1-rs.png",
+      "tvg": "Arena Sport 1"
+    },
+    {
+      "id": "535",
+      "name": "(RS) Arena Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-2-rs.png",
+      "tvg": "Arena Sport 2"
+    },
+    {
+      "id": "536",
+      "name": "(RS) Arena Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-3-rs.png",
+      "tvg": "Arena Sport 3"
+    },
+    {
+      "id": "537",
+      "name": "(RS) Arena Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-4-rs.png",
+      "tvg": "Arena Sport 2"
+    },
+    {
+      "id": "401",
+      "name": "(RS) Arena Sport 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-5-rs.png",
+      "tvg": "Arena Sport 5"
+    },
+    {
+      "id": "136335",
+      "name": "(RS) Arena Sport Premium 1 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "788",
+      "name": "(RS) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eurosport_fr_1.png",
+      "tvg": "Eurosport 1 (SR)"
+    },
+    {
+      "id": "1020",
+      "name": "(RS) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/eurosport_fr_2_hd.png",
+      "tvg": "Eurosport 2 (SR)"
+    },
+    {
+      "id": "179173",
+      "name": "(HR) Max Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/max-sport-1-bg.png",
+      "tvg": ""
+    },
+    {
+      "id": "179174",
+      "name": "(HR) Max Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/max-sport-2-bg.png",
+      "tvg": ""
+    },
+    {
+      "id": "404",
+      "name": "(HR) Arena Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-1-rs.png",
+      "tvg": "Arena Sport 1"
+    },
+    {
+      "id": "218",
+      "name": "(HR) Arena Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-2-rs.png",
+      "tvg": "Arena Sport 2"
+    },
+    {
+      "id": "405",
+      "name": "(HR) Arena Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-3-rs.png",
+      "tvg": "Arena Sport 3"
+    },
+    {
+      "id": "406",
+      "name": "(HR) Arena Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-4-rs.png",
+      "tvg": "Arena Sport 4"
+    },
+    {
+      "id": "787",
+      "name": "(HR) Arena Sport 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/arena-sport-5-rs.png",
+      "tvg": "Arena Sport 5"
+    },
+    {
+      "id": "63015",
+      "name": "(HR) Planet Sport 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/pp/planetsport-1-hr.png",
+      "tvg": ""
+    },
+    {
+      "id": "63016",
+      "name": "(HR) Planet Sport 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/pp/planetsport-2-hr.png",
+      "tvg": ""
+    },
+    {
+      "id": "63017",
+      "name": "(HR) Planet Sport 3 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/pp/planetsport-3-hr.png",
+      "tvg": ""
+    },
+    {
+      "id": "65013",
+      "name": "(AL) Super Sport News",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/MIX/supersport-logo.jpeg",
+      "tvg": ""
+    },
+    {
+      "id": "247",
+      "name": "(AL) Super Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/digit_alb_supersport1_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "248",
+      "name": "(AL) Super Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/digit_alb_supersport2_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "249",
+      "name": "(AL) Super Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/digit_alb_supersport3_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "250",
+      "name": "(AL) Super Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/digit_alb_supersport4_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "6157",
+      "name": "(AL) Super Sport 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/digit_alb_supersport5_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "65014",
+      "name": "(AL) Super Sport 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/digit_alb_supersport6.png",
+      "tvg": ""
+    },
+    {
+      "id": "65098",
+      "name": "(AL) Super Sport Kosova 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/supersportkosova1.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "65099",
+      "name": "(AL) Super Sport Kosova 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/supersportkosova2.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "6155",
+      "name": "(AL) Tring Sport News",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/tring_al_sport_news.png",
+      "tvg": ""
+    },
+    {
+      "id": "2332",
+      "name": "(AL) Tring Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/tring_al_sport_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "2333",
+      "name": "(AL) Tring Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/tring_al_sport_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "2334",
+      "name": "(AL) Tring Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/tringsport3.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "2504",
+      "name": "(AL) Tring Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/tringsport4.png",
+      "tvg": ""
+    },
+    {
+      "id": "6177",
+      "name": "(AL) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/eurosport_fr_2_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "9833",
+      "name": "(AL) K Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/ksport1.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "8967",
+      "name": "(AL) K Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/ksport2.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "9834",
+      "name": "(AL) K Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/ksport3.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "9835",
+      "name": "(AL) K Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/ksport4.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "65110",
+      "name": "(AL) ART Sport 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/artsportal.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "65111",
+      "name": "(AL) ART Sport 2 \u00a0HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/artsportal.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "65112",
+      "name": "(AL) ART Sport 3 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/al/artsportal.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "65211",
+      "name": "(AL) RTSH Sport HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Albania/rtsh-sport-al.png",
+      "tvg": ""
+    },
+    {
+      "id": "65589",
+      "name": "(AL) K Sport 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/MIX/ksport5.png",
+      "tvg": ""
+    },
+    {
+      "id": "65115",
+      "name": "(AL) K Sport 5 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/MIX/ksport5.png",
+      "tvg": ""
+    },
+    {
+      "id": "15904",
+      "name": "(SL) Sport TV 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/sl/sport_tv_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "15905",
+      "name": "(SL) Sport TV 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/sl/sport_tv_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "31728",
+      "name": "(SL) Sport TV 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/sl/sport_tv_3.png",
+      "tvg": "\u0160port TV 3"
+    },
+    {
+      "id": "63028",
+      "name": "(SL) Sportklub 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_rs_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "63029",
+      "name": "(SL) Sportklub 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_rs_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "63030",
+      "name": "(SL) Sportklub 3 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_rs_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "14686",
+      "name": "(ExYu) SportKlub 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_rs.png",
+      "tvg": "Sport Klub 4K"
+    },
+    {
+      "id": "237",
+      "name": "(ExYu) Sportklub 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_si_1.png",
+      "tvg": "Sport Klub 1"
+    },
+    {
+      "id": "238",
+      "name": "(EXYU) Sportklub 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_rs_2.png",
+      "tvg": "Sport Klub 2"
+    },
+    {
+      "id": "1982",
+      "name": "(ExYu) SportKlub 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_rs_3.png",
+      "tvg": "Sport Klub 3"
+    },
+    {
+      "id": "1983",
+      "name": "(ExYu) Sportklub 1",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_si_1.png",
+      "tvg": "Sport Klub 1"
+    },
+    {
+      "id": "1984",
+      "name": "(ExYu) Sportklub 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_si_2.png",
+      "tvg": "Sport Klub 2"
+    },
+    {
+      "id": "239",
+      "name": "(ExYu) Sportklub 3",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_rs_3.png",
+      "tvg": "Sport Klub 3"
+    },
+    {
+      "id": "14687",
+      "name": "(ExYu) SportKlub 4",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/exyu/sport_klub_4.png",
+      "tvg": "Sport Klub 4"
+    },
+    {
+      "id": "14688",
+      "name": "(ExYu) SportKlub 5",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/exyu/sport_klub_5.png",
+      "tvg": "Sport Klub 5"
+    },
+    {
+      "id": "38251",
+      "name": "(ExYu) SportKlub 6",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/exyu/sport_klub_6.png",
+      "tvg": "Sport Klub 6"
+    },
+    {
+      "id": "141472",
+      "name": "(LB) LIBYA SPORT",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "60430",
+      "name": "(IQ)  Iraqia Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/al-iraqiya-sport-iq.png",
+      "tvg": ""
+    },
+    {
+      "id": "80062",
+      "name": "(AR) Palestine Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/pp/palestine_sport_ps.png",
+      "tvg": ""
+    },
+    {
+      "id": "63885",
+      "name": "(AR) BeIn Series 1 HD",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-series-hd2-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "7775",
+      "name": "(AR) beIN Movies Premiere HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-movies-hd1-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "63861",
+      "name": "(AR) beIN Movies ACTION 2 HD +",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-movies-hd2-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "63862",
+      "name": "(AR) beIN Movies 3 DRAMA HD +",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-movies-hd3-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "63863",
+      "name": "(AR)  beIN Movies FAMILY 4 HD +",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-movies-hd4-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "65603",
+      "name": "(AR) Bein Movies 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-movies-hd2-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "65604",
+      "name": "(AR) Bein Movies 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-movies-hd3-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "65605",
+      "name": "(AR) Bein Movies 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/bein-movies-hd4-qa.png",
+      "tvg": ""
+    },
+    {
+      "id": "258679",
+      "name": "(AR) Bein Sport Max 1",
+      "logo": "https://cdn.countryflags.com/thumbs/morocco/flag-400.png",
+      "tvg": ""
+    },
+    {
+      "id": "258680",
+      "name": "(AR) Bein Sport Max 2",
+      "logo": "https://cdn.countryflags.com/thumbs/morocco/flag-400.png",
+      "tvg": ""
+    },
+    {
+      "id": "13241",
+      "name": "(AR) beIN Sports 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_01_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13242",
+      "name": "(AR) beIN Sports 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_02_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13243",
+      "name": "(AR) beIN Sports 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_03_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13244",
+      "name": "(AR) beIN Sports 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_04_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "1966",
+      "name": "(AR) beIN Sports 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_05_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13246",
+      "name": "(AR) beIN Sports 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_06_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13247",
+      "name": "(AR) beIN Sports 7 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_07_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13248",
+      "name": "(AR) beIN Sports 8 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_08_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13249",
+      "name": "(AR) beIN Sports 9 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_09_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13250",
+      "name": "(AR) beIN Sports 10 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_10_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "117446",
+      "name": "(AR) beIN Sports Premium 1 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "117447",
+      "name": "(AR) beIN Sports Premium 2 4K+",
+      "logo": "https://i.postimg.cc/gjP99t7x/BS-premium-2.png",
+      "tvg": ""
+    },
+    {
+      "id": "117448",
+      "name": "(AR) beIN Sports Premium 3 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "113579",
+      "name": "(AR) beIN sport Max 1 4K+",
+      "logo": "https://i.postimg.cc/zXptp4LC/Bein-sports-Max-1.png",
+      "tvg": ""
+    },
+    {
+      "id": "117445",
+      "name": "(AR) beIN sport Max 2 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/BEINSPORTMAX.png",
+      "tvg": ""
+    },
+    {
+      "id": "7777",
+      "name": "(AR) beIN Sport News 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_news.png",
+      "tvg": ""
+    },
+    {
+      "id": "205169",
+      "name": "(AR) beIN Sports Global 4K+",
+      "logo": "http://s3.i3ns.net/cs/etc/blank-icon.png",
+      "tvg": ""
+    },
+    {
+      "id": "80434",
+      "name": "(UAE) Abu Dhabi Sports 1",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/abu_dhabi_sports_ae_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "80433",
+      "name": "(UAE) Abu Dhabi Sports 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/abu_dhabi_sports_ae_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "7462",
+      "name": "(UAE) Abu Dhabi Sport 1",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/abu_dhabi_sports_ae_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "6999",
+      "name": "(UAE) Abu Dhabi Sport 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/abu_dhabi_sports_ae_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "63873",
+      "name": "(UAE) Abu Dhabi Sports 4 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/abu_dhabi_sports_ae_4.png",
+      "tvg": ""
+    },
+    {
+      "id": "63872",
+      "name": "(UAE) Abu Dhabi Sports 3 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/abu_dhabi_sports_ae_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "8428",
+      "name": "(UAE) Sharjah Sports  4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sharjah_sports_tv.png",
+      "tvg": ""
+    },
+    {
+      "id": "63870",
+      "name": "(SA) KSA SPORT 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/ar/ksa-sports-sa.png",
+      "tvg": ""
+    },
+    {
+      "id": "63871",
+      "name": "(SA) KSA SPORT 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/ar/ksa-sports-sa.png",
+      "tvg": ""
+    },
+    {
+      "id": "6998",
+      "name": "(UAE) Dubai Sport 3",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/dd/dubai_ae_racing_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "8399",
+      "name": "(JO) Sport HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_tv_jo.png",
+      "tvg": ""
+    },
+    {
+      "id": "7456",
+      "name": "(EG) Nile Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nile_sport_eg.png",
+      "tvg": ""
+    },
+    {
+      "id": "1571",
+      "name": "(UK) Sky Sport News 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_news_hq.png",
+      "tvg": "409 SkySp News-UK"
+    },
+    {
+      "id": "11400",
+      "name": "(UK) Sky Sports Action 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_action.png",
+      "tvg": "Sky Action"
+    },
+    {
+      "id": "28035",
+      "name": "(UK) Sky Sports Arena 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_arena.png",
+      "tvg": "SkySpArena.uk"
+    },
+    {
+      "id": "210",
+      "name": "(UK) Sky Sports Cricket 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_cricket.png",
+      "tvg": "SkySpCricket.uk"
+    },
+    {
+      "id": "250342",
+      "name": "(UK) Sky Sports F1 \u1d41\u02e1\u1d57\u02b3\u1d43",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_f1.png",
+      "tvg": "SkySpF1.uk"
+    },
+    {
+      "id": "214",
+      "name": "(UK) Sky Sports F1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_f1.png",
+      "tvg": "SkySpF1.uk"
+    },
+    {
+      "id": "250343",
+      "name": "(UK) Sky Sports F1 \u1d34\u1d30",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_f1.png",
+      "tvg": "SkySpF1.uk"
+    },
+    {
+      "id": "28034",
+      "name": "(UK) Sky Sports Football 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_football.png",
+      "tvg": "SkySpFball.uk"
+    },
+    {
+      "id": "11401",
+      "name": "(UK) Sky Sports Golf 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_golf.png",
+      "tvg": "405 SkySp Golf-UK"
+    },
+    {
+      "id": "7641",
+      "name": "(UK) Sky Sports Main Event 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_main_event.png",
+      "tvg": "401 SkySpMainEv-UK"
+    },
+    {
+      "id": "22456",
+      "name": "(UK) Sky Sports Mix 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_mix.png",
+      "tvg": "121 SkySp Mix-UK"
+    },
+    {
+      "id": "213",
+      "name": "(UK) Sky Sports Premier League 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/sky_uk_sports_premier_league.png",
+      "tvg": "SkySpPL.uk"
+    },
+    {
+      "id": "11484",
+      "name": "(UK) BT Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_1_hd.png",
+      "tvg": "BTSport1.uk"
+    },
+    {
+      "id": "11485",
+      "name": "(UK) BT Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_2_hd.png",
+      "tvg": "BTSport2.uk"
+    },
+    {
+      "id": "11486",
+      "name": "(UK) BT Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "316",
+      "name": "(UK) BT Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk.png",
+      "tvg": "BT Sport\\/\\/ESPN"
+    },
+    {
+      "id": "109870",
+      "name": "(UK) BT Sport 5 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "109871",
+      "name": "(UK) BT Sport 6 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "109872",
+      "name": "(UK) BT Sport 7 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "109873",
+      "name": "(UK) BT Sport 8 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "109874",
+      "name": "(UK) BT Sport 9 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "329",
+      "name": "(UK) BT Sport X1 (Match Time Only) 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_extra_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "28039",
+      "name": "(UK) BT Sport X2 (Match Time Only) 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_extra_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "28040",
+      "name": "(UK) BT Sport X3 (Match Time Only) 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_extra_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "11439",
+      "name": "(UK) BT Sport X4 (Match Time Only) 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_extra_4.png",
+      "tvg": ""
+    },
+    {
+      "id": "12661",
+      "name": "(UK) BT Sport X5 (Match Time Only) 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_extra_5.png",
+      "tvg": ""
+    },
+    {
+      "id": "11442",
+      "name": "(UK) BT Sport X6 (Match Time Only) 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/bt_sport_uk_extra_6.png",
+      "tvg": ""
+    },
+    {
+      "id": "13251",
+      "name": "(UK) beIN Sports 11 (ENG)",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/be_in_mena_sports_11_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "313",
+      "name": "(UK) Premier Sports 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/premier_sports.png",
+      "tvg": "Premier Sports"
+    },
+    {
+      "id": "1594",
+      "name": "(UK) Eir Sports 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eir_sport_ie_1.png",
+      "tvg": "eir Sport 1-UK"
+    },
+    {
+      "id": "985",
+      "name": "(UK) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/eurosport_fr_1.png",
+      "tvg": "Eurosport 1"
+    },
+    {
+      "id": "16504",
+      "name": "(ES) Movistar Estrenos 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_estrenos.png",
+      "tvg": ""
+    },
+    {
+      "id": "13164",
+      "name": "(ES) Movistar Accion 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_accion.png",
+      "tvg": ""
+    },
+    {
+      "id": "13162",
+      "name": "(ES) Movistar Comedia 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/es/movistar_comedia.png",
+      "tvg": ""
+    },
+    {
+      "id": "16505",
+      "name": "(ES) Movistar Drama 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_series.png",
+      "tvg": ""
+    },
+    {
+      "id": "13160",
+      "name": "(ES) Movistar Cine 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_d_cine.png",
+      "tvg": ""
+    },
+    {
+      "id": "1809",
+      "name": "(ES) Movistar Series 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_xtra.png",
+      "tvg": ""
+    },
+    {
+      "id": "61974",
+      "name": "(ES) Movistar LaLiga 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/es/M.LaLiga1.png",
+      "tvg": ""
+    },
+    {
+      "id": "61975",
+      "name": "(ES) Movistar LaLiga 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/es/M.LaLiga2.png",
+      "tvg": ""
+    },
+    {
+      "id": "61976",
+      "name": "(ES) Movistar LaLiga 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/es/M.LaLiga3.png",
+      "tvg": ""
+    },
+    {
+      "id": "16512",
+      "name": "(ES) Movistar Liga de Campeones 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_deportes_2.png",
+      "tvg": "MLigaCampeones.es"
+    },
+    {
+      "id": "560",
+      "name": "(ES) Movistar Deportes 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_deportes_1.png",
+      "tvg": "Movistar Deportes 1-SP"
+    },
+    {
+      "id": "16507",
+      "name": "(ES) Movistar F1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_moto_gp.png",
+      "tvg": "MovistarFormula1.es"
+    },
+    {
+      "id": "61977",
+      "name": "(ES) Movistar Formula 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/es/MovistarFormula1.png",
+      "tvg": ""
+    },
+    {
+      "id": "16509",
+      "name": "(ES) Movistar Golf 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_golf.png",
+      "tvg": ""
+    },
+    {
+      "id": "39939",
+      "name": "(ES) Movistar Series Mania 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/movistar_es_partidazo.png",
+      "tvg": ""
+    },
+    {
+      "id": "13173",
+      "name": "(ES) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/eurosport_fr_1_hd.png",
+      "tvg": "Eurosport1.es"
+    },
+    {
+      "id": "16539",
+      "name": "(ES) Eurosport 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/spain/be_in_mena_sports_es_la_liga.png",
+      "tvg": "Eurosport2.es"
+    },
+    {
+      "id": "63300",
+      "name": "(PT) Dazn 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pt/eleven1.png",
+      "tvg": ""
+    },
+    {
+      "id": "63301",
+      "name": "(PT) Dazn 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pt/eleven2.png",
+      "tvg": ""
+    },
+    {
+      "id": "63302",
+      "name": "(PT) Dazn 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pt/eleven3.png",
+      "tvg": ""
+    },
+    {
+      "id": "63303",
+      "name": "(PT) Dazn 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pt/eleven4.png",
+      "tvg": ""
+    },
+    {
+      "id": "63304",
+      "name": "(PT) Dazn 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pt/eleven5.png",
+      "tvg": ""
+    },
+    {
+      "id": "63305",
+      "name": "(PT) Dazn 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pt/eleven6.png",
+      "tvg": ""
+    },
+    {
+      "id": "2739",
+      "name": "(PT) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eurosport_fr_1.png",
+      "tvg": "Eurosport 1 HD"
+    },
+    {
+      "id": "9407",
+      "name": "(PT) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eurosport_fr_2.png",
+      "tvg": "Eurosport 2"
+    },
+    {
+      "id": "864",
+      "name": "(PT) Sport TV 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/portugal/sport_tv_pt_1.png",
+      "tvg": "SPORT TV1 HD"
+    },
+    {
+      "id": "13184",
+      "name": "(PT) Sport TV 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/portugal/sport_tv_pt_2.png",
+      "tvg": "SPORT TV2"
+    },
+    {
+      "id": "862",
+      "name": "(PT) Sport TV 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/portugal/sport_tv_pt_3.png",
+      "tvg": "SPORT TV3 HD"
+    },
+    {
+      "id": "1021",
+      "name": "(PT) Sport TV 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/portugal/sport_tv_pt_4.png",
+      "tvg": "SPORT TV4 HD"
+    },
+    {
+      "id": "1022",
+      "name": "(PT) Sport TV 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pt/sport_tv5.png",
+      "tvg": "SPORT TV5 HD"
+    },
+    {
+      "id": "185762",
+      "name": "(PT) Sport TV 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/portugal/sport_tv_pt_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "63308",
+      "name": "(PT) NBA TV HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nba_tv_us.png",
+      "tvg": ""
+    },
+    {
+      "id": "2732",
+      "name": "(PT) Sporting TV 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sporting_tv_pt.png",
+      "tvg": "SPORT TV+ HD"
+    },
+    {
+      "id": "4395",
+      "name": "(IT) Sky Sport UNO HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/sky_it_sport_1_hd.png",
+      "tvg": "Sky Sport 1"
+    },
+    {
+      "id": "296",
+      "name": "(IT) Sky Sport 24 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/sky_it_sport_24_hd.png",
+      "tvg": "Sky Sport24"
+    },
+    {
+      "id": "31015",
+      "name": "(IT) Sky Sport F1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/sky_it_sport_f1_hd.png",
+      "tvg": "Sky Sport F1"
+    },
+    {
+      "id": "64224",
+      "name": "(IT) Sky Sport Football",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sky-sport-football-it.png",
+      "tvg": ""
+    },
+    {
+      "id": "64227",
+      "name": "(IT) Sky Sport NBA",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/skysportnba.png.jpeg",
+      "tvg": ""
+    },
+    {
+      "id": "64226",
+      "name": "(IT) Sky Sport Arena",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sky-sport-arena-it.png",
+      "tvg": ""
+    },
+    {
+      "id": "46094",
+      "name": "(IT) Sky Sport MotoGP HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/sky_it_sport_moto_gp_hd.png",
+      "tvg": "SkySportMotoGP.it"
+    },
+    {
+      "id": "61175",
+      "name": "(IT) DAZN 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/DAZN.png",
+      "tvg": "DAZNZona.it"
+    },
+    {
+      "id": "38187",
+      "name": "(IT) DAZN 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/DAZN.png",
+      "tvg": "ZonaDAZN2.it"
+    },
+    {
+      "id": "4344",
+      "name": "(IT) Rai Sport + 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/rai_sport.png",
+      "tvg": "RaiSport.it"
+    },
+    {
+      "id": "4387",
+      "name": "(IT) Eurosport 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/eurosport_fr_1_hd.png",
+      "tvg": "Eurosport"
+    },
+    {
+      "id": "60822",
+      "name": "(IT) Eurosport 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/eurosport_fr_2_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "4299",
+      "name": "(IT) SuperTennis HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/it/supertennis.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "4301",
+      "name": "(IT) Sport Italia",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Italy/sport_italia_it.png",
+      "tvg": "Sportitalia"
+    },
+    {
+      "id": "11741",
+      "name": "(RU) Eurosport HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eurosport_fr_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "11597",
+      "name": "(RU) Eurosport 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eurosport_fr_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "11743",
+      "name": "(RU) Extreme Sports",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/extreme_sports_nl.png",
+      "tvg": ""
+    },
+    {
+      "id": "23705",
+      "name": "(RU) Futbol 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/futbol-tj.png",
+      "tvg": ""
+    },
+    {
+      "id": "65331",
+      "name": "(RU) Match Nash Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_nash_sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "30422",
+      "name": "(RU) Match Sports",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/match-strana-ru.png",
+      "tvg": ""
+    },
+    {
+      "id": "65419",
+      "name": "(RU) Match! Futbol 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_futbol_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "65420",
+      "name": "(RU) Match! Futbol 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_futbol_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "65421",
+      "name": "(RU) Match! Futbol 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_futbol_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "65416",
+      "name": "(RU) Match! Nash Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_nash_sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "65266",
+      "name": "(RU) Nash Futbol",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/nash_futbol_ru.png",
+      "tvg": ""
+    },
+    {
+      "id": "65265",
+      "name": "(RU) Nash Futbol 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/nash_futbol_ru.png",
+      "tvg": ""
+    },
+    {
+      "id": "65339",
+      "name": "(RU) NTV Football 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_futbol_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "65340",
+      "name": "(RU) NTV Football 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_futbol_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "65341",
+      "name": "(RU) NTV Football 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/match_ru_futbol_3.png",
+      "tvg": ""
+    },
+    {
+      "id": "65354",
+      "name": "(RU) Setanta Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Russia/setanta_sports_eurasia.png",
+      "tvg": ""
+    },
+    {
+      "id": "11750",
+      "name": "(RU) Viasat Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/vv/viasat_sport_se.png",
+      "tvg": ""
+    },
+    {
+      "id": "63651",
+      "name": "(PL) Polsat Sport Premium 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "63652",
+      "name": "(PL) Polsat Sport Premium 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "202377",
+      "name": "(PL) Polsat Sport Premium 3 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "202378",
+      "name": "(PL) Polsat Sport Premium 4 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "202379",
+      "name": "(PL) Polsat Sport Premium 5 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "202380",
+      "name": "(PL) Polsat Sport Premium 6HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "21909",
+      "name": "(PL) Canal+ Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/canalplus_pl_sport_hd.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "21922",
+      "name": "(PL) Canal+ Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/cc/canalplus_fr_sport_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "63648",
+      "name": "(PL) Canal+ Sport 3 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/canalplus_pl_sport_hd.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "63649",
+      "name": "(PL) Canal+ Sport 4 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/canalplus_pl_sport_hd.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "21904",
+      "name": "(PL) Eleven Sports 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eleven-sports-1-portugal-uk-pt.png",
+      "tvg": ""
+    },
+    {
+      "id": "21903",
+      "name": "(PL) Eleven Sports 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eleven-sports-2-portugal-uk-pt.png",
+      "tvg": ""
+    },
+    {
+      "id": "41766",
+      "name": "(PL) Eleven Sports 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/eleven-sports-3-portugal-uk-pt.png",
+      "tvg": ""
+    },
+    {
+      "id": "41767",
+      "name": "(PL) Eleven Sports 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pl/eleven_sport4.png",
+      "tvg": "ElevenSports4.pl"
+    },
+    {
+      "id": "22069",
+      "name": "(PL) Polsat Sport Extra 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport_news.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "22087",
+      "name": "(PL) Polsat Sport Fight 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pl/polsat_sport_fight.jpg",
+      "tvg": "PolsatSportFight.pl"
+    },
+    {
+      "id": "15616",
+      "name": "(PL) nSport+ 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/pl/NSport.png",
+      "tvg": "nsport.pl"
+    },
+    {
+      "id": "63658",
+      "name": "(PL) Sportklub HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport_klub_pl.png",
+      "tvg": ""
+    },
+    {
+      "id": "22081",
+      "name": "(PL) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/eurosport_hd.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "63650",
+      "name": "(PL) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/eurosport2.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "22086",
+      "name": "(PL) Polsat Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/polsat_sport.jpg",
+      "tvg": ""
+    },
+    {
+      "id": "63654",
+      "name": "(PL) Extreme Sports HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/extreme_sports_fr.png",
+      "tvg": "ExtremeSports.pl"
+    },
+    {
+      "id": "63657",
+      "name": "(PL) Polsat Sport News HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/pp/polsat_sport_news.png",
+      "tvg": "PolsatSportNews.pl"
+    },
+    {
+      "id": "63656",
+      "name": "(PL) Golf Channel HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/golf_channel_us.png",
+      "tvg": ""
+    },
+    {
+      "id": "21993",
+      "name": "(PL) TVP Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/poland/tvp_sport.jpg",
+      "tvg": "TVPSport.pl"
+    },
+    {
+      "id": "23566",
+      "name": "(CZ) Golf Channel",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/gg/golf_channel_us.png",
+      "tvg": "Golf Channel HD-CZ"
+    },
+    {
+      "id": "23580",
+      "name": "(CZ) Nova Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nova_cz_sport_1.png",
+      "tvg": "Nova Sport 1 HD-CZ"
+    },
+    {
+      "id": "23581",
+      "name": "(CZ) Nova Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nova_cz_sport_2.png",
+      "tvg": "Nova Sport 2 HD-CZ"
+    },
+    {
+      "id": "23584",
+      "name": "(CZ) Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport2_cz.png",
+      "tvg": "Sport2 HD-CZ"
+    },
+    {
+      "id": "147286",
+      "name": "(HU) Eurosport 1 4K+",
+      "logo": "https://asiagrandiptv.us/logo/eurosport1.png",
+      "tvg": ""
+    },
+    {
+      "id": "71492",
+      "name": "(HU) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/british_eurosport_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "23626",
+      "name": "(HU) Digi Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/dd/digi_sport1_hu.png",
+      "tvg": "DigiSport1.hu"
+    },
+    {
+      "id": "23632",
+      "name": "(HU) Digi Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/dd/digi_sport2_hu.png",
+      "tvg": "DigiSport2.hu"
+    },
+    {
+      "id": "23635",
+      "name": "(HU) Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/hu/tisza.jpg",
+      "tvg": "Sport1.hu"
+    },
+    {
+      "id": "23634",
+      "name": "(HU) Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sport2_hu.png",
+      "tvg": "Sport2.hu"
+    },
+    {
+      "id": "49326",
+      "name": "(HU) M4 SPORT 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/magyar_tv4_sport_hu.png",
+      "tvg": "M4Sport.hu"
+    },
+    {
+      "id": "44079",
+      "name": "(GR) Cosmote Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%201%20FHD.png",
+      "tvg": "OTESport1.gr"
+    },
+    {
+      "id": "44080",
+      "name": "(GR) Cosmote Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%202%20FHD.png",
+      "tvg": "OTESport2.gr"
+    },
+    {
+      "id": "44081",
+      "name": "(GR) Cosmote Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%203%20FHD.png",
+      "tvg": "OTESport3.gr"
+    },
+    {
+      "id": "44082",
+      "name": "(GR) Cosmote Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%204%20FHD.png",
+      "tvg": "OTESport4.gr"
+    },
+    {
+      "id": "44083",
+      "name": "(GR) Cosmote Sport 5 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%205%20FHD.png",
+      "tvg": "OTESport5.gr"
+    },
+    {
+      "id": "44084",
+      "name": "(GR) Cosmote Sport 6 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%206%20FHD.png",
+      "tvg": "OTESport6.gr"
+    },
+    {
+      "id": "44085",
+      "name": "(GR) Cosmote Sport 7 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%207%20FHD.png",
+      "tvg": "OTESport7.gr"
+    },
+    {
+      "id": "44086",
+      "name": "(GR) Cosmote Sport 8 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/Cosmote%20Sport%208%20FHD.png",
+      "tvg": "OTESport8.gr"
+    },
+    {
+      "id": "63916",
+      "name": "(GR) EPT SPORT HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/greece/ert-sports-gr/ert-sports-gr.png",
+      "tvg": ""
+    },
+    {
+      "id": "63914",
+      "name": "(GR) Eurosport 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/eurosport_fr_1.png",
+      "tvg": "EuroSport1.gr"
+    },
+    {
+      "id": "65198",
+      "name": "(GR) Nova Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nova_gr_sports_1_hd.png",
+      "tvg": "NovaSports1.gr"
+    },
+    {
+      "id": "65199",
+      "name": "(GR) Nova Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nova_gr_sports_2_hd.png",
+      "tvg": "NovaSports2.gr"
+    },
+    {
+      "id": "65200",
+      "name": "(GR) Nova Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/nn/nova_gr_sports_3_hd.png",
+      "tvg": "NovaSports3.gr"
+    },
+    {
+      "id": "802",
+      "name": "(RO) Digi Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/romania/digi_sport1_ro_hd.png",
+      "tvg": "DigiSport1.ro"
+    },
+    {
+      "id": "803",
+      "name": "(RO) Digi Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/romania/digi_sport2_ro.png",
+      "tvg": "Digi Sport 2-RO"
+    },
+    {
+      "id": "804",
+      "name": "(RO) Digi Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/romania/digi_sport3_ro.png",
+      "tvg": "Digi Sport 3-RO"
+    },
+    {
+      "id": "9180",
+      "name": "(RO) Digi Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/romania/digi_sport4_ro.png",
+      "tvg": "Digi Sport 4-RO"
+    },
+    {
+      "id": "38422",
+      "name": "(RO) Prima Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/telekom-sport1-ro.png",
+      "tvg": ""
+    },
+    {
+      "id": "65476",
+      "name": "(RO) Prima Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/telekom-sport2-ro.png",
+      "tvg": ""
+    },
+    {
+      "id": "38424",
+      "name": "(RO) Prima Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/telekom-sport3-hd-ro.png",
+      "tvg": ""
+    },
+    {
+      "id": "38425",
+      "name": "(RO) Prima Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/telekom-sport4-hd-ro.png",
+      "tvg": ""
+    },
+    {
+      "id": "209950",
+      "name": "(RO) Prima Sport 5 4K+",
+      "logo": "https://picon.pp.ua/prima-sport-5.png",
+      "tvg": ""
+    },
+    {
+      "id": "162299",
+      "name": "(RO) Orange Sport 1 4K+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "162303",
+      "name": "(RO) Orange Sport 1 HD+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "162300",
+      "name": "(RO) Orange Sport 2 4K+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "162304",
+      "name": "(RO) Orange Sport 2 HD+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "162301",
+      "name": "(RO) Orange Sport 3 4K+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "162305",
+      "name": "(RO) Orange Sport 3 HD+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "162302",
+      "name": "(RO) Orange Sport 4 4K+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "162307",
+      "name": "(RO) Orange Sport 4 HD+",
+      "logo": "https://picon.nxtbox.tv/satlogo/Senderlogos-master/orange%20sport.png",
+      "tvg": ""
+    },
+    {
+      "id": "9178",
+      "name": "(RO) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/romania/eurosport_fr_1_hd.png",
+      "tvg": "Eurosport 1-RO"
+    },
+    {
+      "id": "9177",
+      "name": "(RO) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/romania/eurosport_fr_2_hd.png",
+      "tvg": "Eurosport 2-RO"
+    },
+    {
+      "id": "38423",
+      "name": "(RO) Extreme Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/extreme_sports_fr.png",
+      "tvg": ""
+    },
+    {
+      "id": "61894",
+      "name": "(RO) Look Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ll/looksport-ro.png",
+      "tvg": ""
+    },
+    {
+      "id": "14249",
+      "name": "(BG) Diema Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Bulgaria2/diema_sport_bg_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "14250",
+      "name": "(BG) Diema Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Bulgaria2/diema_sport_bg_2_hd.png",
+      "tvg": "DiemaSport2.bg"
+    },
+    {
+      "id": "102811",
+      "name": "(BG) Diema Sport 3 4K+",
+      "logo": "http://tv.iptvboss.net/ch_logo/DIEMASPORT.png",
+      "tvg": ""
+    },
+    {
+      "id": "61815",
+      "name": "(BG) Max Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/max-sport-1-bg.png",
+      "tvg": "MAXSport1.bg"
+    },
+    {
+      "id": "61816",
+      "name": "(BG) Max Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/max-sport-2-bg.png",
+      "tvg": "MAXSport2.bg"
+    },
+    {
+      "id": "61817",
+      "name": "(BG) Max Sport 3 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/max-sport-3-bg.png",
+      "tvg": "MAXSport3.bg"
+    },
+    {
+      "id": "61818",
+      "name": "(BG) Max Sport 4 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/mm/max-sport-4-bg.png",
+      "tvg": "MAXSport4.bg"
+    },
+    {
+      "id": "61796",
+      "name": "(BG) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Bulgaria2/eurosport_fr_1_hd.png",
+      "tvg": "EurosportHD.bg"
+    },
+    {
+      "id": "61797",
+      "name": "(BG) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Bulgaria2/eurosport_fr_2_hd.png",
+      "tvg": "Eurosport2.bg"
+    },
+    {
+      "id": "9250",
+      "name": "(BG) Nova Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Bulgaria2/nova_sport_bg.png",
+      "tvg": "NOVAsport.bg"
+    },
+    {
+      "id": "61759",
+      "name": "(BG) Auto Motor Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/aa/auto_motor_sport_channel.png",
+      "tvg": ""
+    },
+    {
+      "id": "14903",
+      "name": "(IN) PTV Sports 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/in/PTV_Sports.png",
+      "tvg": ""
+    },
+    {
+      "id": "7892",
+      "name": "(IN) Star Sports 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/india/star_sports_in_1.png",
+      "tvg": "Star Sports 1-IN"
+    },
+    {
+      "id": "7893",
+      "name": "(IN) Star Sports 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/india/star_sports_in_2.png",
+      "tvg": "Star Sports 2-IN"
+    },
+    {
+      "id": "14797",
+      "name": "(IN) Ten Golf 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/india/ten_sports_in_golf_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "14924",
+      "name": "(IN) Willow Cricket 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ww/willow_us.png",
+      "tvg": ""
+    },
+    {
+      "id": "65510",
+      "name": "(PK) PTV Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/pp/ptv_sports_pk.png",
+      "tvg": ""
+    },
+    {
+      "id": "65513",
+      "name": "(PK) PTV Sports",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/pp/ptv_sports_pk.png",
+      "tvg": ""
+    },
+    {
+      "id": "65516",
+      "name": "(PK) Ten Sports",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/ten_sports_in_pakistan.png",
+      "tvg": ""
+    },
+    {
+      "id": "25393",
+      "name": "(IR) Varzish Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/vv/varzesh_tv_ir.png",
+      "tvg": ""
+    },
+    {
+      "id": "121840",
+      "name": "(IL) Eurosport 1 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "141814",
+      "name": "(IL) Eurosport 2 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121793",
+      "name": "(IL) Yes Sport 1 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121792",
+      "name": "(IL) Yes Sport 2 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121866",
+      "name": "(IL) Yes sport 3 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121790",
+      "name": "(IL) Yes Sport 4 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121789",
+      "name": "(IL) Yes Sport 5 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121868",
+      "name": "(IL) Yes sport 5 Gold",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121786",
+      "name": "(IL) Yes Sport 5 Gold HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121787",
+      "name": "(IL) Yes Sport 5 HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121836",
+      "name": "(IL) Yes Sport 5 Live 4k+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121788",
+      "name": "(IL) Yes Sport 5 Live HD+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121867",
+      "name": "(IL) Yes sport 5 Plus 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121869",
+      "name": "(IL) Yes sport 5 Sport 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121837",
+      "name": "(IL) Yes Sport 5 Star 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "121847",
+      "name": "(IL) Sport 5 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "18207",
+      "name": "(US) NHL Network 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/nhl_network.png",
+      "tvg": "NHL Network USA-US"
+    },
+    {
+      "id": "18240",
+      "name": "(US) Bein Sports 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/be_in_mena_sports_us.png",
+      "tvg": ""
+    },
+    {
+      "id": "63164",
+      "name": "(US) AFN Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/afn_sports_us.png",
+      "tvg": ""
+    },
+    {
+      "id": "18215",
+      "name": "(US) ESPN 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/espn_2_hd.png",
+      "tvg": "ESPN2-US"
+    },
+    {
+      "id": "18214",
+      "name": "(US) ESPN News 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/espnews_hd.png",
+      "tvg": "ESPN News-US"
+    },
+    {
+      "id": "19942",
+      "name": "(US) ESPN Plus 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/fox_soccer_plus.png",
+      "tvg": "FOX Soccer Plus-US"
+    },
+    {
+      "id": "18206",
+      "name": "(US) ESPN 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/fox_sports_us_1.png",
+      "tvg": "Fox Sports 1-US"
+    },
+    {
+      "id": "18205",
+      "name": "(US) ESPN 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/fox_sports_us_2.png",
+      "tvg": "Fox Sports 2-US"
+    },
+    {
+      "id": "102466",
+      "name": "(US) NFL Network 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "102465",
+      "name": "(US) NFL RedZone 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "24828",
+      "name": "(US) MLB Network 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/mlb_network.png",
+      "tvg": "MLB Network-US"
+    },
+    {
+      "id": "18174",
+      "name": "(US) NBA 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/nba_tv_us.png",
+      "tvg": "NBA TV USA-US"
+    },
+    {
+      "id": "18173",
+      "name": "(US) NBC Golf 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/golf_channel_us.png",
+      "tvg": ""
+    },
+    {
+      "id": "18154",
+      "name": "(US) SportsNet One 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sportsnet_one.png",
+      "tvg": ""
+    },
+    {
+      "id": "205347",
+      "name": "(US) CBS Sport 4K+",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "18129",
+      "name": "(US) Willow Cricket 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/usa/willow_us.png",
+      "tvg": "US-willow-cricket"
+    },
+    {
+      "id": "18127",
+      "name": "(US) WWE",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/us/wwe.png",
+      "tvg": ""
+    },
+    {
+      "id": "27675",
+      "name": "(AZ) CBC SPORT",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/cc/cbc_sport_az.png",
+      "tvg": ""
+    },
+    {
+      "id": "69209",
+      "name": "(ARM) Shant TV Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/own/am/Shanttv.png",
+      "tvg": ""
+    },
+    {
+      "id": "13761",
+      "name": "(SW) V Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/viasat_sport_se_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "61928",
+      "name": "(SW) V Sport Premium 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/viasat_sport_se_premium_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "13760",
+      "name": "(SW) V Sport Fotboll 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/vv/viasat_fotboll.png",
+      "tvg": ""
+    },
+    {
+      "id": "28027",
+      "name": "(SW) V Sport Hockey 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/viasat_hockey_se_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "28026",
+      "name": "(SW) V Sport Motor 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/viasat_motor_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "64972",
+      "name": "(SW) V Sport Golf",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/viasat_golf_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "64970",
+      "name": "(SW) V Sport HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/viasat_sport_se.png",
+      "tvg": ""
+    },
+    {
+      "id": "25576",
+      "name": "(SW) Eurosport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/eurosport_fr_1_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "25598",
+      "name": "(SW) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/eurosport_fr_2_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "64979",
+      "name": "(SW) Strive Sport 1 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/strive-uk.png",
+      "tvg": ""
+    },
+    {
+      "id": "65467",
+      "name": "(SW) Sportskanalen",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sportkanalen-se.png",
+      "tvg": ""
+    },
+    {
+      "id": "64978",
+      "name": "(SW) TV 2 Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/tv2_sport_dk.png",
+      "tvg": ""
+    },
+    {
+      "id": "111201",
+      "name": "(NO) TV2 SPORT 1 HD",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "111202",
+      "name": "(NO) TV2 SPORT 2 HD",
+      "logo": "http://unlock-pro.biz:80/images/2b97bc8297381763f7963a99d387918a.png",
+      "tvg": ""
+    },
+    {
+      "id": "111203",
+      "name": "(NO) TV2 SPORT PREMIUM HD",
+      "logo": "",
+      "tvg": ""
+    },
+    {
+      "id": "65453",
+      "name": "(SW) C More Golf",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/c_more_se_golf.png",
+      "tvg": ""
+    },
+    {
+      "id": "25721",
+      "name": "(DK) TV 2 Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/tv2_sport_dk.png",
+      "tvg": ""
+    },
+    {
+      "id": "61910",
+      "name": "(DK) TV 2 Sport X",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/tv2_sport_dk_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "61900",
+      "name": "(DK) TV3 Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/tt/tv3-sport-dk.png",
+      "tvg": ""
+    },
+    {
+      "id": "13764",
+      "name": "(DK) TV3 Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/viasat_tv3_sport_dk.png",
+      "tvg": ""
+    },
+    {
+      "id": "13765",
+      "name": "(DK) TV3 Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/viasat_tv3_sport2_dk_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "25599",
+      "name": "(DK) Eurosport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/eurosport_fr_2_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "71470",
+      "name": "(DK) V Sport Golf",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/denmark/viasat_golf_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "25720",
+      "name": "(NO) TV 2 Sport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Scandinavian/tv2_sport_dk.png",
+      "tvg": ""
+    },
+    {
+      "id": "25600",
+      "name": "(NO) Eurosport 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/Scandinavian/eurosport_fr_1.png",
+      "tvg": ""
+    },
+    {
+      "id": "65519",
+      "name": "(NO) Eurosport 2 HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/uk/british_eurosport_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "65523",
+      "name": "(NO) V Sport Golf 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/viasat_golf_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "65525",
+      "name": "(NO) V Sport Hockey 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/viasat_hockey_se_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "71501",
+      "name": "(FI) C More Sport 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/c_more_se_sport_1_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "71500",
+      "name": "(FI) C More Sport 1 HD",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/c_more_se_sport_1_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "71502",
+      "name": "(FI) C More Sport 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/satlogo/sweden/c_more_se_sport_2_hd.png",
+      "tvg": ""
+    },
+    {
+      "id": "66833",
+      "name": "(CO) Winsports Plus HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ww/win_sports_co.png",
+      "tvg": ""
+    },
+    {
+      "id": "66832",
+      "name": "(CO) DirecTV Sports HD+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/dd/directv-sports-us.png",
+      "tvg": ""
+    },
+    {
+      "id": "24982",
+      "name": "(MX) ESPN 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/espn_2.png",
+      "tvg": ""
+    },
+    {
+      "id": "24981",
+      "name": "(MX) ESPN 3",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/espn_3_lam.png",
+      "tvg": ""
+    },
+    {
+      "id": "24980",
+      "name": "(LT) ESPN",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ee/espn_us_plus.png",
+      "tvg": ""
+    },
+    {
+      "id": "24970",
+      "name": "(MX) ESPN 2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/fox_sports_global.png",
+      "tvg": ""
+    },
+    {
+      "id": "24969",
+      "name": "(MX) ESPN 1 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/fox_sports_1_cl.png",
+      "tvg": ""
+    },
+    {
+      "id": "64202",
+      "name": "(BR) SporTV 3",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sportv3_br.png",
+      "tvg": ""
+    },
+    {
+      "id": "64201",
+      "name": "(BR) SporTV 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sportv2_br_alternativo.png",
+      "tvg": ""
+    },
+    {
+      "id": "64200",
+      "name": "(BR) SporTV 1",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sportv_br.png",
+      "tvg": ""
+    },
+    {
+      "id": "64185",
+      "name": "(BR) ESPN 2",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/fox_sports_2_br.png",
+      "tvg": ""
+    },
+    {
+      "id": "64184",
+      "name": "(BR) ESPN",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ff/fox_sports_1_cl.png",
+      "tvg": ""
+    },
+    {
+      "id": "64180",
+      "name": "(BR) Band Sport",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/bb/band_sports.png",
+      "tvg": ""
+    },
+    {
+      "id": "25055",
+      "name": "(BR) SporTV2 4K+",
+      "logo": "http://picons.iptvservicenijmegen.nl/lyngsat/tv/ss/sportv2_br.png",
+      "tvg": ""
+    }
+  ]
+}
