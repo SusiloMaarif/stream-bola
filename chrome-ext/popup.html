@@ -3,205 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 480px;
-      max-height: 600px;
-      background: #0a0a12;
-      color: #e0e0e0;
-      font-family: system-ui, -apple-system, sans-serif;
-      font-size: 13px;
-      overflow-x: hidden;
+    body { 
+      width: 400px; min-height: 500px;
+      background: #0a0a12; color: #e0e0e0;
+      font-family: system-ui, sans-serif;
+      margin: 0; padding: 12px;
     }
-    .header {
-      padding: 12px 14px;
-      background: #12121a;
-      border-bottom: 1px solid #1e1e2e;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    h1 { font-size: 18px; margin: 0 0 8px; }
+    h1 span { color: #00e676; }
+    .stats { font-size: 11px; color: #666; margin-bottom: 12px; }
+    input { 
+      width: 100%; padding: 8px 12px; border-radius: 8px;
+      border: 1px solid #2a2a3e; background: #12121a; color: #e0e0e0;
+      font-size: 12px; outline: none; box-sizing: border-box; margin-bottom: 8px;
     }
-    .header h1 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #00e676;
+    .ch-list { max-height: 380px; overflow-y: auto; }
+    .ch-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 10px; border-radius: 8px;
+      border: 1px solid #1e1e2e; background: #12121a;
+      margin-bottom: 4px; cursor: pointer; font-size: 12px;
     }
-    .header p {
-      font-size: 11px;
-      color: #555;
-      margin-top: 2px;
-    }
-    .controls {
-      display: flex;
-      gap: 6px;
-      margin-top: 8px;
-    }
-    .controls button {
-      padding: 5px 10px;
-      border-radius: 6px;
-      border: 1px solid #2a2a3e;
-      background: #1a1a2e;
-      color: #aaa;
-      cursor: pointer;
-      font-size: 11px;
-      font-weight: 600;
-      transition: all 0.15s;
-    }
-    .controls button:hover {
-      background: #2a2a3e;
-      color: #fff;
-    }
-    .controls button.danger { border-color: #ff444466; color: #ff4444; }
-    .controls button.danger:hover { background: #ff444422; }
-    .counter {
-      margin-left: auto;
-      color: #888;
-      font-size: 11px;
-      padding: 5px 0;
-    }
-    .streams {
-      padding: 8px;
-      max-height: 470px;
-      overflow-y: auto;
-    }
-    .stream-item {
-      background: #12121a;
-      border: 1px solid #1e1e2e;
-      border-radius: 10px;
-      padding: 10px 12px;
-      margin-bottom: 6px;
-      transition: all 0.15s;
-    }
-    .stream-item:hover {
-      border-color: #333;
-    }
-    .stream-item .channel {
-      font-weight: 700;
-      font-size: 14px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .stream-item .channel .badge {
-      font-size: 9px;
-      padding: 2px 6px;
-      border-radius: 4px;
-      background: #00e67622;
-      color: #00e676;
-      font-weight: 600;
-    }
-    .stream-item .url {
-      font-size: 10px;
-      color: #555;
-      margin-top: 4px;
-      word-break: break-all;
-      max-height: 32px;
-      overflow: hidden;
-    }
-    .stream-item .meta {
-      display: flex;
-      gap: 8px;
-      font-size: 10px;
-      color: #444;
-      margin-top: 4px;
-    }
-    .stream-item .actions {
-      display: flex;
-      gap: 4px;
-      margin-top: 6px;
-    }
-    .stream-item .actions button {
-      padding: 4px 10px;
-      border-radius: 5px;
-      border: 1px solid #2a2a3e;
-      background: #1a1a2e;
-      color: #aaa;
-      cursor: pointer;
-      font-size: 10px;
-      font-weight: 600;
-    }
-    .stream-item .actions button.copy { border-color: #00e67644; color: #00e676; }
-    .stream-item .actions button.test { border-color: #ffd70044; color: #ffd700; }
-    .stream-item .actions button.play { border-color: #4488ff44; color: #4488ff; }
-    .actions button:hover { background: #2a2a3e; }
-    .stream-item.m3u8 { border-left: 3px solid #00e676; }
-    .stream-item.embed { border-left: 3px solid #ffd700; }
-    .stream-item.auto { border-left: 3px solid #4488ff; }
-    .empty {
-      text-align: center;
-      padding: 40px 20px;
-      color: #444;
-    }
-    .empty .icon { font-size: 32px; margin-bottom: 8px; }
-    .empty h3 { font-size: 14px; color: #666; margin-bottom: 6px; }
-    .empty p { font-size: 12px; line-height: 1.5; }
-    .status {
-      background: #0d0d1a;
-      padding: 6px 14px;
-      font-size: 10px;
-      color: #555;
-      display: flex;
-      gap: 10px;
-    }
-    .status .dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-    .status .dot.on { background: #00e676; }
-    .status .dot.off { background: #444; }
-    .toast {
-      position: fixed;
-      bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #00e676;
-      color: #000;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 11px;
-      font-weight: 600;
-      opacity: 0;
-      transition: opacity 0.3s;
-      pointer-events: none;
-    }
-    .toast.show { opacity: 1; }
-    ::-webkit-scrollbar { width: 4px; }
-    ::-webkit-scrollbar-track { background: #0a0a12; }
-    ::-webkit-scrollbar-thumb { background: #2a2a3e; border-radius: 4px; }
+    .ch-item:hover { border-color: #333; }
+    .ch-item .play { color: #00e67655; font-size: 10px; margin-left: auto; }
+    .loading { text-align: center; padding: 20px; color: #555; }
+    #player-container { margin-top: 8px; background: #000; border-radius: 8px; overflow: hidden; }
+    video { width: 100%; display: block; max-height: 250px; }
+    #back { display: none; padding: 6px 12px; border-radius: 6px; border: 1px solid #333; background: #1a1a2e; color: #aaa; cursor: pointer; font-size: 11px; margin-bottom: 6px; }
   </style>
 </head>
 <body>
-  <div class="header">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <h1>🎬 Stream Injector</h1>
-      <span class="counter" id="count">0 streams</span>
-    </div>
-    <p>Monitoring network traffic — streams auto-captured saat browsing</p>
-    <div class="controls">
-      <button id="clearBtn" class="danger">🗑 Clear</button>
-      <button id="exportBtn">📥 Export M3U</button>
-      <button id="toggleBtn">⏸ Pause</button>
-    </div>
+  <h1>📺 <span>IPTV</span> Injector</h1>
+  <div class="stats" id="stats">Loading channels...</div>
+  
+  <div id="list-view">
+    <input type="text" id="search" placeholder="🔍 Cari channel... (beIN, ESPN, DAZN, Sky...)" oninput="filterChannels()">
+    <div class="ch-list" id="ch-list"></div>
   </div>
 
-  <div class="status">
-    <span><span class="dot on" id="statusDot"></span> <span id="statusText">Active</span></span>
-    <span id="filterText">All captures</span>
+  <button id="back" onclick="showList()">← Kembali</button>
+  <div id="player-container" style="display:none">
+    <video id="player" controls autoplay playsInline></video>
   </div>
-
-  <div class="streams" id="streamList">
-    <div class="empty">
-      <div class="icon">🕵️</div>
-      <h3>Waiting for streams...</h3>
-      <p>Buka situs streaming bola seperti<br>
-      airdropglobalz.my.id atau starballtv.pages.dev<br>
-      lalu klik channel — stream akan muncul di sini</p>
-    </div>
-  </div>
-
-  <div class="toast" id="toast"></div>
 
   <script src="popup.js"></script>
 </body>

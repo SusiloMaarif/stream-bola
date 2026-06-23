@@ -1,35 +1,26 @@
 {
   "manifest_version": 3,
-  "name": "Stream Injector 🎬",
+  "name": "IPTV Stream Injector",
   "version": "1.0",
-  "description": "Capture & extract M3U8 streams from any streaming site. Recovers hidden IPTV channel URLs.",
+  "description": "Play 742 sports channels (beIN, ESPN, DAZN, Sky, BT Sport, NBA, NFL) directly in browser",
   "permissions": [
-    "webRequest",
+    "declarativeNetRequest",
     "storage",
-    "downloads",
-    "tabs",
-    "scripting"
+    "activeTab"
   ],
   "host_permissions": [
-    "*://*/*"
+    "http://xp1.tv/*",
+    "http://*.xp1.tv/*"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "48": "icon.png"
-    }
+    "default_title": "IPTV Stream Injector"
   },
   "icons": {
-    "48": "icon.png"
+    "128": "icon.png"
   },
-  "content_scripts": [
-    {
-      "matches": ["*://*/*"],
-      "js": ["content.js"],
-      "run_at": "document_start"
-    }
-  ]
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
 }
